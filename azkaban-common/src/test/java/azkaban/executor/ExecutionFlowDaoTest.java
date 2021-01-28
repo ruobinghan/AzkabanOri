@@ -18,7 +18,9 @@ package azkaban.executor;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.any;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 import azkaban.db.DatabaseOperator;
 import azkaban.db.DatabaseTransOperator;
@@ -40,6 +42,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.Set;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -247,6 +250,28 @@ public class ExecutionFlowDaoTest {
 
     assertTwoFlowSame(flow1, fetchedFlow1.getSecond());
     assertTwoFlowSame(flow2, fetchedFlow2.getSecond());
+  }
+
+  @Test
+  public void testFetchStaleFlows() throws Exception {
+    long preThresholdTimeMs = System.currentTimeMillis();
+    final ExecutableFlow flow1 = submitNewFlow("exectest1", "exec1", preThresholdTimeMs,
+        ExecutionOptions.DEFAULT_FLOW_PRIORITY, Status.RUNNING, Optional.of(preThresholdTimeMs));
+    final ExecutableFlow flow2 = submitNewFlow("exectest1", "exec2", preThresholdTimeMs,
+        ExecutionOptions.DEFAULT_FLOW_PRIORITY, Status.SUCCEEDED, Optional.of(preThresholdTimeMs));
+
+    long thresholdTimeMs = preThresholdTimeMs + 1000L;
+    long postThresholdTimeMs = thresholdTimeMs + 1000L;
+    final ExecutableFlow flow3 = submitNewFlow("exectest1", "exec3", preThresholdTimeMs,
+        ExecutionOptions.DEFAULT_FLOW_PRIORITY, Status.RUNNING, Optional.of(postThresholdTimeMs));
+
+    // Only the first flow in the RUNNING state started before thresholdTime should be returned.
+    final List<ExecutableFlow> fetchedStaleFlows =
+        this.executionFlowDao.fetchStaleFlows(thresholdTimeMs);
+    assertThat(fetchedStaleFlows.size()).isEqualTo(1);
+
+    final ExecutableFlow fetchedFlow1 = fetchedStaleFlows.get(0);
+    assertTwoFlowSame(flow1, fetchedFlow1);
   }
 
   @Test
@@ -577,6 +602,41 @@ public class ExecutionFlowDaoTest {
   }
 
   @Test
+  public void testLockSuccessSelectAndUpdateExecutionWithLockingWithoutLimit() throws Exception {
+    when(mysqlNamedLock.getLock(any(DatabaseTransOperator.class), any(String.class), any(Integer.class)))
+        .thenReturn(true);
+    when(mysqlNamedLock.releaseLock(any(DatabaseTransOperator.class), any(String.class))).thenReturn(true);
+    final long currentTime = System.currentTimeMillis();
+    final ExecutableFlow flow1 = submitNewFlow("exectest1", "exec1", currentTime,
+        ExecutionOptions.DEFAULT_FLOW_PRIORITY, Status.READY);
+    assertThat(this.executionFlowDao.selectAndUpdateExecutionWithLocking(false,2, Status.READY).size())
+        .isEqualTo(1);
+    Set<Integer> expectedSet = new HashSet<>();
+    expectedSet.add(flow1.getExecutionId());
+    assertThat(this.executionFlowDao.selectAndUpdateExecutionWithLocking(false,2, Status.READY))
+        .isEqualTo(expectedSet);
+  }
+
+  @Test
+  public void testLockSuccessSelectAndUpdateExecutionWithLockingWithLimit() throws Exception {
+    when(mysqlNamedLock.getLock(any(DatabaseTransOperator.class), any(String.class), any(Integer.class)))
+        .thenReturn(true);
+    when(mysqlNamedLock.releaseLock(any(DatabaseTransOperator.class), any(String.class))).thenReturn(true);
+    final long currentTime = System.currentTimeMillis();
+    final ExecutableFlow flow1 = submitNewFlow("exectest1", "exec1", currentTime,
+        ExecutionOptions.DEFAULT_FLOW_PRIORITY, Status.READY);
+    final ExecutableFlow flow2 = submitNewFlow("exectest1", "exec1", currentTime,
+        ExecutionOptions.DEFAULT_FLOW_PRIORITY, Status.READY);
+    assertThat(this.executionFlowDao.selectAndUpdateExecutionWithLocking(true,2, Status.READY).size())
+        .isEqualTo(2);
+    Set<Integer> expectedSet = new HashSet<>();
+    expectedSet.add(flow1.getExecutionId());
+    expectedSet.add(flow2.getExecutionId());
+    assertThat(this.executionFlowDao.selectAndUpdateExecutionWithLocking(true,2, Status.READY))
+        .isEqualTo(expectedSet);
+  }
+
+  @Test
   public void testSelectAndUpdateExecutionWithPriority() throws Exception {
     // Selecting executions when DB is empty
     assertThat(this.executionFlowDao.selectAndUpdateExecution(-1, true))
@@ -859,12 +919,22 @@ public class ExecutionFlowDaoTest {
   }
 
   private ExecutableFlow submitNewFlow(final String projectName, final String flowName,
-      final long submitTime, final int flowPriority) throws IOException, ExecutorManagerException {
-    return submitNewFlow(projectName, flowName, submitTime, flowPriority, Status.PREPARING);
+      final long submitTime, final int flowPriority) throws IOException,
+      ExecutorManagerException {
+    return submitNewFlow(projectName, flowName, submitTime, flowPriority, Status.PREPARING,
+        Optional.empty());
   }
 
   private ExecutableFlow submitNewFlow(final String projectName, final String flowName,
       final long submitTime, final int flowPriority, final Status status) throws IOException,
+      ExecutorManagerException {
+    return submitNewFlow(projectName, flowName, submitTime, flowPriority, status,
+        Optional.empty());
+  }
+
+  private ExecutableFlow submitNewFlow(final String projectName, final String flowName,
+      final long submitTime, final int flowPriority, final Status status,
+      Optional<Long> startTime) throws IOException,
       ExecutorManagerException {
     final ExecutableFlow flow = TestUtils.createTestExecutableFlow(projectName, flowName);
     flow.setStatus(status);
@@ -872,6 +942,7 @@ public class ExecutionFlowDaoTest {
     flow.setSubmitUser("testUser");
     flow.getExecutionOptions().getFlowParameters().put(ExecutionOptions.FLOW_PRIORITY,
         String.valueOf(flowPriority));
+    startTime.ifPresent(st -> flow.setStartTime(st));
     this.executionFlowDao.uploadExecutableFlow(flow);
     return flow;
   }

@@ -16,9 +16,10 @@
 package azkaban.executor.container;
 
 import azkaban.Constants;
-import azkaban.Constants.ContainerizedExecutionManagerProperties;
+import azkaban.Constants.ContainerizedDispatchManagerProperties;
 import azkaban.DispatchMethod;
 import azkaban.executor.AbstractExecutorManagerAdapter;
+import azkaban.executor.AlerterHolder;
 import azkaban.executor.ExecutableFlow;
 import azkaban.executor.Executor;
 import azkaban.executor.ExecutorApiGateway;
@@ -45,9 +46,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * This class is used to dispatch execution on Containerized infrastructure. Each execution will
- * be dispatched in single container. This way, it will bring isolation between all the
- * executions.
+ * This class is used to dispatch execution on Containerized infrastructure. Each execution will be
+ * dispatched in single container. This way, it will bring isolation between all the executions.
+ * When the flow will be executed or triggered by schedule, it will be added in a queue maintained
+ * in database. The state of execution will be READY in case of Containerized dispatch. When the
+ * flow will be picked up by @{@link QueueProcessorThread} to dispatch it to containerized
+ * infrastructure, it will be marked as DISPATCHING. Once flow preparation will start on container,
+ * it will be marked as PREPARING. When a flow will be ready to run on container, it will be marked
+ * as RUNNING. In case of failure in dispatch, it will move back to READY state in queue.
  */
 @Singleton
 public class ContainerizedDispatchManager extends AbstractExecutorManagerAdapter {
@@ -60,10 +66,12 @@ public class ContainerizedDispatchManager extends AbstractExecutorManagerAdapter
   @Inject
   public ContainerizedDispatchManager(final Props azkProps, final ExecutorLoader executorLoader,
       final CommonMetrics commonMetrics, final ExecutorApiGateway apiGateway,
-      final ContainerizedImpl containerizedImpl) throws ExecutorManagerException{
-    super(azkProps, executorLoader, commonMetrics, apiGateway);
+      final ContainerizedImpl containerizedImpl,
+      final AlerterHolder alerterHolder) throws ExecutorManagerException {
+    super(azkProps, executorLoader, commonMetrics, apiGateway, alerterHolder);
     rateLimiter =
-        RateLimiter.create(azkProps.getInt(ContainerizedExecutionManagerProperties.CONTAINERIZED_CREATION_RATE_LIMIT, 20));
+        RateLimiter.create(azkProps
+            .getInt(ContainerizedDispatchManagerProperties.CONTAINERIZED_CREATION_RATE_LIMIT, 20));
     this.containerizedImpl = containerizedImpl;
   }
 
@@ -81,8 +89,8 @@ public class ContainerizedDispatchManager extends AbstractExecutorManagerAdapter
   }
 
   /**
-   * Get queued flow ids from database. The status for queued flows is READY for
-   * containerization.
+   * Get queued flow ids from database. The status for queued flows is READY for containerization.
+   *
    * @return
    */
   public List<Integer> getQueuedFlowIds() {
@@ -97,6 +105,7 @@ public class ContainerizedDispatchManager extends AbstractExecutorManagerAdapter
 
   /**
    * Get size of queued flows. The status for queued flows is READY for containerization.
+   *
    * @return
    */
   @Override
@@ -106,6 +115,7 @@ public class ContainerizedDispatchManager extends AbstractExecutorManagerAdapter
 
   /**
    * Get dispatch method enum for this class.
+   *
    * @return
    */
   @Override
@@ -132,6 +142,7 @@ public class ContainerizedDispatchManager extends AbstractExecutorManagerAdapter
    * Get the status for executions maintained in queue. For other dispatch implementations, the
    * status for executions in queue is PREPARING. But for containerized dispatch method, the status
    * will be READY.
+   *
    * @return
    */
   @Override
@@ -153,8 +164,8 @@ public class ContainerizedDispatchManager extends AbstractExecutorManagerAdapter
 
   /**
    * This method is used to enable queue processor thread. It will resume dispatching executions.
-   * Due to any maintenance of containerized infrastructure, if queue processor was disabled then
-   * it can enabled again using this method.
+   * Due to any maintenance of containerized infrastructure, if queue processor was disabled then it
+   * can enabled again using this method.
    */
   @Override
   public void enableQueueProcessorThread() {
@@ -162,9 +173,9 @@ public class ContainerizedDispatchManager extends AbstractExecutorManagerAdapter
   }
 
   /**
-   * This method is used to disable queue processor thread. It will stop dispatching executions.
-   * In case of maintenance of containerized infrastructure, this method can be used to disable
-   * queue processor. It will disable dispatch of executions in containers.
+   * This method is used to disable queue processor thread. It will stop dispatching executions. In
+   * case of maintenance of containerized infrastructure, this method can be used to disable queue
+   * processor. It will disable dispatch of executions in containers.
    */
   @Override
   public void disableQueueProcessorThread() {
@@ -199,14 +210,14 @@ public class ContainerizedDispatchManager extends AbstractExecutorManagerAdapter
       setActive(
           this.azkProps.getBoolean(Constants.ConfigurationKeys.QUEUEPROCESSING_ENABLED, true));
       this.executionsBatchProcessingEnabled = azkProps
-          .getBoolean(ContainerizedExecutionManagerProperties.CONTAINERIZED_EXECUTION_BATCH_ENABLED,
+          .getBoolean(ContainerizedDispatchManagerProperties.CONTAINERIZED_EXECUTION_BATCH_ENABLED,
               false);
       this.executionsBatchSize =
           azkProps
-              .getInt(ContainerizedExecutionManagerProperties.CONTAINERIZED_EXECUTION_BATCH_SIZE,
+              .getInt(ContainerizedDispatchManagerProperties.CONTAINERIZED_EXECUTION_BATCH_SIZE,
                   10);
       this.executorService = Executors.newFixedThreadPool(azkProps.getInt(
-          ContainerizedExecutionManagerProperties.CONTAINERIZED_EXECUTION_PROCESSING_THREAD_POOL_SIZE,
+          ContainerizedDispatchManagerProperties.CONTAINERIZED_EXECUTION_PROCESSING_THREAD_POOL_SIZE,
           10));
       this.setName("Containerized-QueueProcessor-Thread");
     }
@@ -311,106 +322,79 @@ public class ContainerizedDispatchManager extends AbstractExecutorManagerAdapter
 
   //TODO: BDP-3642 Add a way to call Flow container APIs using apiGateway
   @Override
-  public LogData getExecutableFlowLog(ExecutableFlow exFlow, int offset, int length)
-      throws ExecutorManagerException {
-    return null;
-  }
-
-  //TODO: BDP-3642 Add a way to call Flow container APIs using apiGateway
-  @Override
-  public LogData getExecutionJobLog(ExecutableFlow exFlow, String jobId, int offset, int length,
-      int attempt) throws ExecutorManagerException {
-    return null;
-  }
-
-  //TODO: BDP-3642 Add a way to call Flow container APIs using apiGateway
-  @Override
-  public List<Object> getExecutionJobStats(ExecutableFlow exflow, String jobId, int attempt)
-      throws ExecutorManagerException {
-    return null;
-  }
-
-  //TODO: BDP-3642 Add a way to call Flow container APIs using apiGateway
-  @Override
-  public void cancelFlow(ExecutableFlow exFlow, String userId) throws ExecutorManagerException {
-
-  }
-
-  //TODO: BDP-3642 Add a way to call Flow container APIs using apiGateway
-  @Override
   public void resumeFlow(ExecutableFlow exFlow, String userId) throws ExecutorManagerException {
-
+    throw new UnsupportedOperationException("Unsupported Method");
   }
 
   //TODO: BDP-3642 Add a way to call Flow container APIs using apiGateway
   @Override
   public void pauseFlow(ExecutableFlow exFlow, String userId) throws ExecutorManagerException {
-
+    throw new UnsupportedOperationException("Unsupported Method");
   }
 
   //TODO: BDP-3642 Add a way to call Flow container APIs using apiGateway
   @Override
   public void retryFailures(ExecutableFlow exFlow, String userId) throws ExecutorManagerException {
-
+    throw new UnsupportedOperationException("Unsupported Method");
   }
 
   //TODO: BDP-2567 Add container stats information
   @Override
   public Map<String, Object> callExecutorStats(int executorId, String action,
       Pair<String, String>... param) throws IOException, ExecutorManagerException {
-    throw new UnsupportedOperationException("Invalid Method");
+    throw new UnsupportedOperationException("Unsupported Method");
   }
 
   //TODO: BDP-2567 Add way to call jmx endpoint for flow container
   @Override
   public Map<String, Object> callExecutorJMX(String hostPort, String action, String mBean)
       throws IOException {
-    throw new UnsupportedOperationException("Invalid Method");
+    throw new UnsupportedOperationException("Unsupported Method");
   }
 
   @Override
   public Map<String, String> doRampActions(List<Map<String, Object>> rampAction)
       throws ExecutorManagerException {
-    throw new UnsupportedOperationException("Invalid Method");
+    throw new UnsupportedOperationException("Unsupported Method");
   }
 
   @Override
   public Set<String> getAllActiveExecutorServerHosts() {
-    throw new UnsupportedOperationException("Invalid Method");
+    throw new UnsupportedOperationException("Unsupported Method");
   }
 
   @Override
   public State getExecutorManagerThreadState() {
-    throw new UnsupportedOperationException("Invalid Method");
+    throw new UnsupportedOperationException("Unsupported Method");
   }
 
   @Override
   public boolean isExecutorManagerThreadActive() {
-    throw new UnsupportedOperationException("Invalid Method");
+    throw new UnsupportedOperationException("Unsupported Method");
   }
 
   @Override
   public long getLastExecutorManagerThreadCheckTime() {
-    throw new UnsupportedOperationException("Invalid Method");
+    throw new UnsupportedOperationException("Unsupported Method");
   }
 
   @Override
   public Set<? extends String> getPrimaryServerHosts() {
-    throw new UnsupportedOperationException("Invalid Method");
+    throw new UnsupportedOperationException("Unsupported Method");
   }
 
   @Override
   public Collection<Executor> getAllActiveExecutors() {
-    throw new UnsupportedOperationException("Invalid Method");
+    throw new UnsupportedOperationException("Unsupported Method");
   }
 
   @Override
   public Executor fetchExecutor(int executorId) throws ExecutorManagerException {
-    throw new UnsupportedOperationException("Invalid Method");
+    throw new UnsupportedOperationException("Unsupported Method");
   }
 
   @Override
   public void setupExecutors() throws ExecutorManagerException {
-    throw new UnsupportedOperationException("Invalid Method");
+    throw new UnsupportedOperationException("Unsupported Method");
   }
 }
