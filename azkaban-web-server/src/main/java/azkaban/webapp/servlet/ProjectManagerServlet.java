@@ -1850,7 +1850,6 @@ public class ProjectManagerServlet extends LoginAbstractAzkabanServlet {
       throws ServletException, IOException {
     final User user = session.getUser();
     final String projectName = (String) multipart.get("project");
-
     // Fetch the uploader's IP
     final String uploaderIPAddr = WebUtils.getRealClientIpAddr(req);
 

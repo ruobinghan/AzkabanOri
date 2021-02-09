@@ -65,21 +65,7 @@ import azkaban.webapp.metrics.WebMetrics;
 import azkaban.webapp.plugin.PluginRegistry;
 import azkaban.webapp.plugin.TriggerPlugin;
 import azkaban.webapp.plugin.ViewerPlugin;
-import azkaban.webapp.servlet.AbstractAzkabanServlet;
-import azkaban.webapp.servlet.ExecutorServlet;
-import azkaban.webapp.servlet.FlowTriggerInstanceServlet;
-import azkaban.webapp.servlet.FlowTriggerServlet;
-import azkaban.webapp.servlet.HistoryServlet;
-import azkaban.webapp.servlet.IndexRedirectServlet;
-import azkaban.webapp.servlet.JMXHttpServlet;
-import azkaban.webapp.servlet.LoginAbstractAzkabanServlet;
-import azkaban.webapp.servlet.NoteServlet;
-import azkaban.webapp.servlet.ProjectManagerServlet;
-import azkaban.webapp.servlet.ProjectServlet;
-import azkaban.webapp.servlet.ScheduleServlet;
-import azkaban.webapp.servlet.StatsServlet;
-import azkaban.webapp.servlet.StatusServlet;
-import azkaban.webapp.servlet.TriggerManagerServlet;
+import azkaban.webapp.servlet.*;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.linkedin.restli.server.RestliServlet;
@@ -439,7 +425,9 @@ public class AzkabanWebServer extends AzkabanServer implements IMBeanRegistrable
     routesMap.put("/jmx", new JMXHttpServlet());
     routesMap.put("/stats", new StatsServlet());
     routesMap.put("/notes", new NoteServlet());
+    routesMap.put("/view", new ViewServlet());
     routesMap.put("/", new IndexRedirectServlet(defaultServletPath));
+
 
     routesMap.put("/status", new StatusServlet(this.statusService));
 

@@ -36,6 +36,10 @@
              href="${context}/manager?project=${project.name}&download=true">
             <span class="glyphicon glyphicon-download"></span> Download
           </a>
+          <a class="btn btn-sm btn-info"
+             href="${context}/view?action=uploadView&json=asdf">
+            <span class="glyphicon glyphicon-download"></span> View
+           </a>
         </div>
       </div>
     </div>
