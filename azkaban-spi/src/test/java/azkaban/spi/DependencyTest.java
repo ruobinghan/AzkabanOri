@@ -18,12 +18,13 @@ package azkaban.spi;
 
 import azkaban.test.executions.ThinArchiveTestUtils;
 import azkaban.utils.InvalidHashException;
-import java.io.File;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
 
-import static org.junit.Assert.*;
+import java.io.File;
+
+import static org.junit.Assert.assertEquals;
 
 
 public class DependencyTest {
