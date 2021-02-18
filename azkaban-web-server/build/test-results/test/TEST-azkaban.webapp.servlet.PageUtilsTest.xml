@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="azkaban.webapp.servlet.PageUtilsTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-12-04T01:56:42" hostname="MSI" time="0.553">
+  <properties/>
+  <testcase name="testUploadButtonIsVisibleToAllWhenGlobalPropertyIsNotSet" classname="azkaban.webapp.servlet.PageUtilsTest" time="0.532"/>
+  <testcase name="testUploadButtonIsEnabledForAdminUser" classname="azkaban.webapp.servlet.PageUtilsTest" time="0.011"/>
+  <testcase name="testUploadButtonisHiddenWhenGlobalPropertyIsSet" classname="azkaban.webapp.servlet.PageUtilsTest" time="0.01"/>
+  <system-out><![CDATA[2020/12/04 09:56:42.220 +0800  INFO [ExecutionLogsCleaner] [azk-execlog-cleaner] Cleaning old logs from execution_logs
+2020/12/04 09:56:42.220 +0800  INFO [ExecutionLogsCleaner] [azk-execlog-cleaner] Cleaning old log files before 2020-09-11T09:56:42.220+08:00
+2020/12/04 09:56:42.220 +0800  INFO [ExecutionLogsCleaner] [azk-execlog-cleaner] Cleaned up 0 log entries.
+2020/12/04 09:56:42.220 +0800  INFO [ExecutionLogsCleaner] [azk-execlog-cleaner] log clean up time: 0 ms.
+2020/12/04 09:56:42.464 +0800  INFO [XmlUserManager] [Test worker] Loading user testAdmin
+2020/12/04 09:56:42.465 +0800  INFO [XmlUserManager] [Test worker] Loading user testUpload
+2020/12/04 09:56:42.465 +0800  INFO [XmlUserManager] [Test worker] Loading user testUser
+2020/12/04 09:56:42.538 +0800  INFO [UserUtils] [Test worker] Starting configuration watching thread.
+2020/12/04 09:56:42.544 +0800  INFO [XmlUserManager] [Test worker] Loading user testAdmin
+2020/12/04 09:56:42.544 +0800  INFO [XmlUserManager] [Test worker] Loading user testUpload
+2020/12/04 09:56:42.544 +0800  INFO [XmlUserManager] [Test worker] Loading user testUser
+2020/12/04 09:56:42.546 +0800  INFO [UserUtils] [Test worker] Starting configuration watching thread.
+2020/12/04 09:56:42.560 +0800  INFO [XmlUserManager] [Test worker] Loading user testAdmin
+2020/12/04 09:56:42.560 +0800  INFO [XmlUserManager] [Test worker] Loading user testUpload
+2020/12/04 09:56:42.560 +0800  INFO [XmlUserManager] [Test worker] Loading user testUser
+2020/12/04 09:56:42.562 +0800  INFO [UserUtils] [Test worker] Starting configuration watching thread.
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="azkaban.restli.DeployProjectTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2020-12-04T01:56:30" hostname="MSI" time="0.014">
+  <properties/>
+  <testcase name="testErrorMessageDeploy" classname="azkaban.restli.DeployProjectTest" time="0.014"/>
+  <testcase name="testWarnErrorDeploy" classname="azkaban.restli.DeployProjectTest" time="0.0"/>
+  <testcase name="testWarnedDeploy" classname="azkaban.restli.DeployProjectTest" time="0.0"/>
+  <testcase name="testErrorDeploy" classname="azkaban.restli.DeployProjectTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

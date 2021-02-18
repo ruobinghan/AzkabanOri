@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class azkaban.scheduler.QuartzSchedulerTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class azkaban.scheduler.QuartzSchedulerTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/azkaban.scheduler.html">azkaban.scheduler</a> &gt; QuartzSchedulerTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">5</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.340s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">testCreateScheduleAndRun</td>
+<td>0.136s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testInvalidCron</td>
+<td>0.009s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testPauseSchedule</td>
+<td>0.164s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSchedulingDuplicateJob</td>
+<td>0.005s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testUnschedule</td>
+<td>0.026s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2020/12/04 09:56:30.758 +0800  INFO [DatabaseSetup] [Test worker] Creating new table quartz-all-tables
+2020/12/04 09:56:31.368 +0800  INFO [DispatchMethod] [Test worker] Value of dispatch method is : PUSH
+2020/12/04 09:56:32.192 +0800  INFO [MLog] [Test worker] MLog clients using log4j logging.
+2020/12/04 09:56:32.303 +0800  INFO [C3P0Registry] [Test worker] Initializing c3p0-0.9.1.1 [built 15-March-2007 01:32:31; debug? true; trace: 10]
+2020/12/04 09:56:32.375 +0800  INFO [StdSchedulerFactory] [Test worker] Using default implementation for ThreadExecutor
+2020/12/04 09:56:32.428 +0800  INFO [SchedulerSignalerImpl] [Test worker] Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020/12/04 09:56:32.429 +0800  INFO [QuartzScheduler] [Test worker] Quartz Scheduler v.2.2.1 created.
+2020/12/04 09:56:32.431 +0800  INFO [JobStoreTX] [Test worker] Using thread monitor-based data access locking (synchronization).
+2020/12/04 09:56:32.433 +0800  INFO [JobStoreTX] [Test worker] JobStoreTX initialized.
+2020/12/04 09:56:32.435 +0800  INFO [QuartzScheduler] [Test worker] Scheduler meta-data: Quartz Scheduler (v2.2.1) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.impl.jdbcjobstore.JobStoreTX' - which supports persistence. and is not clustered.
+
+2020/12/04 09:56:32.436 +0800  INFO [StdSchedulerFactory] [Test worker] Quartz scheduler 'QuartzScheduler' initialized from an externally provided properties instance.
+2020/12/04 09:56:32.436 +0800  INFO [StdSchedulerFactory] [Test worker] Quartz scheduler version: 2.2.1
+2020/12/04 09:56:32.443 +0800  INFO [QuartzScheduler] [Test worker] JobFactory set to: azkaban.scheduler.SchedulerJobFactory@dcfd4a
+2020/12/04 09:56:32.566 +0800  INFO [AbstractPoolBackedDataSource] [Test worker] Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -&gt; 3, acquireRetryAttempts -&gt; 30, acquireRetryDelay -&gt; 1000, autoCommitOnClose -&gt; false, automaticTestTable -&gt; null, breakAfterAcquireFailure -&gt; false, checkoutTimeout -&gt; 0, connectionCustomizerClassName -&gt; null, connectionTesterClassName -&gt; com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -&gt; 1hge9efaec25sihmvpyxr|7e42b7, debugUnreturnedConnectionStackTraces -&gt; false, description -&gt; null, driverClass -&gt; org.h2.Driver, factoryClassLocation -&gt; null, forceIgnoreUnresolvedTransactions -&gt; false, identityToken -&gt; 1hge9efaec25sihmvpyxr|7e42b7, idleConnectionTestPeriod -&gt; 0, initialPoolSize -&gt; 3, jdbcUrl -&gt; jdbc:h2:mem:test;IGNORECASE=TRUE, lastAcquisitionFailureDefaultUser -&gt; null, maxAdministrativeTaskTime -&gt; 0, maxConnectionAge -&gt; 0, maxIdleTime -&gt; 0, maxIdleTimeExcessConnections -&gt; 0, maxPoolSize -&gt; 20, maxStatements -&gt; 0, maxStatementsPerConnection -&gt; 120, minPoolSize -&gt; 1, numHelperThreads -&gt; 3, numThreadsAwaitingCheckoutDefaultUser -&gt; 0, preferredTestQuery -&gt; null, properties -&gt; {user=******, password=******}, propertyCycle -&gt; 0, testConnectionOnCheckin -&gt; false, testConnectionOnCheckout -&gt; false, unreturnedConnectionTimeout -&gt; 0, usesTraditionalReflectiveProxies -&gt; false ]
+2020/12/04 09:56:32.651 +0800  INFO [JobStoreTX] [Test worker] Freed 0 triggers from 'acquired' / 'blocked' state.
+2020/12/04 09:56:32.670 +0800  INFO [JobStoreTX] [Test worker] Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2020/12/04 09:56:32.670 +0800  INFO [JobStoreTX] [Test worker] Recovery complete.
+2020/12/04 09:56:32.671 +0800  INFO [JobStoreTX] [Test worker] Removed 0 'complete' triggers.
+2020/12/04 09:56:32.671 +0800  INFO [JobStoreTX] [Test worker] Removed 0 stale fired job entries.
+2020/12/04 09:56:32.674 +0800  INFO [QuartzScheduler] [Test worker] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2020/12/04 09:56:32.674 +0800  INFO [QuartzScheduler] [Test worker] Quartz Scheduler started.
+2020/12/04 09:56:32.771 +0800  INFO [QuartzScheduler] [Test worker] Quartz Schedule with jobDetail null is registered.
+{org.quartz.jobStore.misfireThreshold: 1000, azkaban.server.schedule.enable_quartz: true, org.quartz.jobStore.driverDelegateClass: org.quartz.impl.jdbcjobstore.StdJDBCDelegate, org.quartz.jobStore.tablePrefix: qrtz_, org.quartz.dataSource.quartzDS.URL: jdbc:h2:mem:test;IGNORECASE=TRUE, database.type: h2, org.quartz.threadPool.class: org.quartz.simpl.SimpleThreadPool, org.quartz.threadPool.threadCount: 10, org.quartz.jobStore.dataSource: quartzDS, org.quartz.jobStore.isClustered: false, org.quartz.jdbcStore: true, org.quartz.dataSource.quartzDS.driver: org.h2.Driver, org.quartz.jobStore.class: org.quartz.impl.jdbcjobstore.JobStoreTX, org.quartz.dataSource.quartzDS.maxConnections: 20, h2.path: ./h2, }
+2020/12/04 09:56:32.854 +0800  INFO [QuartzScheduler] [Test worker] Quartz Schedule with jobDetail null is registered.
+{org.quartz.jobStore.misfireThreshold: 1000, azkaban.server.schedule.enable_quartz: true, org.quartz.jobStore.driverDelegateClass: org.quartz.impl.jdbcjobstore.StdJDBCDelegate, org.quartz.jobStore.tablePrefix: qrtz_, org.quartz.dataSource.quartzDS.URL: jdbc:h2:mem:test;IGNORECASE=TRUE, database.type: h2, org.quartz.threadPool.class: org.quartz.simpl.SimpleThreadPool, org.quartz.threadPool.threadCount: 10, org.quartz.jobStore.dataSource: quartzDS, org.quartz.jobStore.isClustered: false, org.quartz.jdbcStore: true, org.quartz.dataSource.quartzDS.driver: org.h2.Driver, org.quartz.jobStore.class: org.quartz.impl.jdbcjobstore.JobStoreTX, org.quartz.dataSource.quartzDS.maxConnections: 20, h2.path: ./h2, }
+2020/12/04 09:56:32.880 +0800  INFO [QuartzScheduler] [Test worker] Quartz Schedule with jobDetail null is registered.
+{org.quartz.jobStore.misfireThreshold: 1000, azkaban.server.schedule.enable_quartz: true, org.quartz.jobStore.driverDelegateClass: org.quartz.impl.jdbcjobstore.StdJDBCDelegate, org.quartz.jobStore.tablePrefix: qrtz_, org.quartz.dataSource.quartzDS.URL: jdbc:h2:mem:test;IGNORECASE=TRUE, database.type: h2, org.quartz.threadPool.class: org.quartz.simpl.SimpleThreadPool, org.quartz.threadPool.threadCount: 10, org.quartz.jobStore.dataSource: quartzDS, org.quartz.jobStore.isClustered: false, org.quartz.jdbcStore: true, org.quartz.dataSource.quartzDS.driver: org.h2.Driver, org.quartz.jobStore.class: org.quartz.impl.jdbcjobstore.JobStoreTX, org.quartz.dataSource.quartzDS.maxConnections: 20, h2.path: ./h2, }
+{org.quartz.jobStore.misfireThreshold: 1000, azkaban.server.schedule.enable_quartz: true, org.quartz.jobStore.driverDelegateClass: org.quartz.impl.jdbcjobstore.StdJDBCDelegate, org.quartz.jobStore.tablePrefix: qrtz_, org.quartz.dataSource.quartzDS.URL: jdbc:h2:mem:test;IGNORECASE=TRUE, database.type: h2, org.quartz.threadPool.class: org.quartz.simpl.SimpleThreadPool, org.quartz.threadPool.threadCount: 10, org.quartz.jobStore.dataSource: quartzDS, org.quartz.jobStore.isClustered: false, org.quartz.jdbcStore: true, org.quartz.dataSource.quartzDS.driver: org.h2.Driver, org.quartz.jobStore.class: org.quartz.impl.jdbcjobstore.JobStoreTX, org.quartz.dataSource.quartzDS.maxConnections: 20, h2.path: ./h2, }
+2020/12/04 09:56:33.015 +0800  INFO [QuartzScheduler] [Test worker] Quartz Schedule with jobDetail null is registered.
+2020/12/04 09:56:33.016 +0800  WARN [QuartzScheduler] [Test worker] can not register existing job with job name: SampleJob and group name: SampleService
+2020/12/04 09:56:33.018 +0800  INFO [QuartzScheduler] [Test worker] Scheduler QuartzScheduler_$_NON_CLUSTERED shutting down.
+2020/12/04 09:56:33.018 +0800  INFO [QuartzScheduler] [Test worker] Scheduler QuartzScheduler_$_NON_CLUSTERED paused.
+2020/12/04 09:56:33.022 +0800  INFO [QuartzScheduler] [Test worker] Scheduler QuartzScheduler_$_NON_CLUSTERED shutdown complete.
+2020/12/04 09:56:33.022 +0800  INFO [QuartzScheduler] [Test worker] Quartz Scheduler shut down.
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 4.6</a> at 2020-12-4 9:56:43</p>
+</div>
+</div>
+</body>
+</html>

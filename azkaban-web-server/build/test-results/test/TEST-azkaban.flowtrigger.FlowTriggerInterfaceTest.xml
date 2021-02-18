@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="azkaban.flowtrigger.FlowTriggerInterfaceTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-12-04T01:56:27" hostname="MSI" time="0.004">
+  <properties/>
+  <testcase name="testDependencyInstanceConfig" classname="azkaban.flowtrigger.FlowTriggerInterfaceTest" time="0.001"/>
+  <testcase name="testDependencyPluginConfig" classname="azkaban.flowtrigger.FlowTriggerInterfaceTest" time="0.0"/>
+  <testcase name="testDependencyInstanceRuntimeProps" classname="azkaban.flowtrigger.FlowTriggerInterfaceTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="azkaban.webapp.servlet.ProjectManagerServletTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-12-04T01:56:42" hostname="MSI" time="0.105">
+  <properties/>
+  <testcase name="testRemoveScheduleOfDeletedFlows" classname="azkaban.webapp.servlet.ProjectManagerServletTest" time="0.04"/>
+  <testcase name="verifyCallingValidateCSRFToken" classname="azkaban.webapp.servlet.ProjectManagerServletTest" time="0.032"/>
+  <testcase name="verifyCallingAddCSRFTokenForPermissionsPage" classname="azkaban.webapp.servlet.ProjectManagerServletTest" time="0.033"/>
+  <system-out><![CDATA[2020/12/04 09:56:42.899 +0800  INFO [Project] [Test worker] AzkabanEventReporter is not configured
+2020/12/04 09:56:42.928 +0800  INFO [Project] [Test worker] AzkabanEventReporter is not configured
+2020/12/04 09:56:42.935 +0800  INFO [LoginAbstractAzkabanServlet] [Test worker] CSRF token validation successful. SessionId is not from cookie.
+2020/12/04 09:56:42.939 +0800  INFO [Project] [Test worker] AzkabanEventReporter is not configured
+2020/12/04 09:56:42.942 +0800  INFO [LoginAbstractAzkabanServlet] [Test worker] CSRF token validation successful. SessionId is not from cookie.
+2020/12/04 09:56:42.946 +0800  INFO [Project] [Test worker] AzkabanEventReporter is not configured
+2020/12/04 09:56:42.948 +0800  INFO [LoginAbstractAzkabanServlet] [Test worker] CSRF token validation successful. SessionId is not from cookie.
+2020/12/04 09:56:42.953 +0800  INFO [Project] [Test worker] AzkabanEventReporter is not configured
+2020/12/04 09:56:42.955 +0800  INFO [LoginAbstractAzkabanServlet] [Test worker] CSRF token validation successful. SessionId is not from cookie.
+2020/12/04 09:56:42.960 +0800  INFO [Project] [Test worker] AzkabanEventReporter is not configured
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

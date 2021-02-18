@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="azkaban.webapp.servlet.WebUtilsTest" tests="6" skipped="1" failures="0" errors="0" timestamp="2020-12-04T01:56:43" hostname="MSI" time="0.002">
+  <properties/>
+  <testcase name="testWhenXForwardedForHeaderMultipleUpstreamsUseHeader" classname="azkaban.webapp.servlet.WebUtilsTest" time="0.001"/>
+  <testcase name="testReportLoginEvent" classname="azkaban.webapp.servlet.WebUtilsTest" time="0.0"/>
+  <testcase name="testIPv6NoPort" classname="azkaban.webapp.servlet.WebUtilsTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="testWhenXForwardedForHeaderUseHeader" classname="azkaban.webapp.servlet.WebUtilsTest" time="0.0"/>
+  <testcase name="testWhenClientIpNoPort" classname="azkaban.webapp.servlet.WebUtilsTest" time="0.0"/>
+  <testcase name="testWhenNoXForwardedForHeaderUseClientIp" classname="azkaban.webapp.servlet.WebUtilsTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

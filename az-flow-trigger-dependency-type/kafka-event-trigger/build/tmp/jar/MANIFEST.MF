@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Implementation-Title: kafka-event-trigger
+Implementation-Version: 3.91.0-86-g259b2510
+

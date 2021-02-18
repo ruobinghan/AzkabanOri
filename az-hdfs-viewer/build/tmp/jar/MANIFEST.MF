@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Implementation-Title: az-hdfs-viewer
+Implementation-Version: 3.91.0-86-g259b2510
+
