@@ -1,4 +1,4 @@
 Manifest-Version: 1.0
 Implementation-Title: azkaban-hadoop-security-plugin
-Implementation-Version: 3.91.0-109-g6ce52bb3
+Implementation-Version: 0.1.0-SNAPSHOT
 
