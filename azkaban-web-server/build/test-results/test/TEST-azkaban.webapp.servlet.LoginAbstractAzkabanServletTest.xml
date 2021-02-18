@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="azkaban.webapp.servlet.LoginAbstractAzkabanServletTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2020-12-04T01:56:41" hostname="MSI" time="0.788">
+  <properties/>
+  <testcase name="testWhenPostRequestChangedClientPortSessionIsValid" classname="azkaban.webapp.servlet.LoginAbstractAzkabanServletTest" time="0.722"/>
+  <testcase name="testWhenPostRequestSessionIsValid" classname="azkaban.webapp.servlet.LoginAbstractAzkabanServletTest" time="0.011"/>
+  <testcase name="testWhenPostRequestChangedClientIpSessionIsInvalid" classname="azkaban.webapp.servlet.LoginAbstractAzkabanServletTest" time="0.012"/>
+  <testcase name="testWhenGetRequestSessionIsValid" classname="azkaban.webapp.servlet.LoginAbstractAzkabanServletTest" time="0.011"/>
+  <testcase name="testWhenPostRequestWithMultipleUpstreamsSessionIsValid" classname="azkaban.webapp.servlet.LoginAbstractAzkabanServletTest" time="0.011"/>
+  <testcase name="testLoginRevealingCredentialsShouldThrowFailure" classname="azkaban.webapp.servlet.LoginAbstractAzkabanServletTest" time="0.012"/>
+  <testcase name="testWhenPostRequestWithUpstreamSessionIsValid" classname="azkaban.webapp.servlet.LoginAbstractAzkabanServletTest" time="0.009"/>
+  <system-out><![CDATA[2020/12/04 09:56:41.729 +0800  WARN [SessionCache] [Test worker] azkaban.session.max_number_per_ip_per_user is not configured. The number of sessions per IP per user is not being capped.
+2020/12/04 09:56:41.910 +0800  INFO [LoginAbstractAzkabanServlet] [Test worker] 127.0.0.1 user "POST null - null" not-browser
+2020/12/04 09:56:41.948 +0800  WARN [SessionCache] [Test worker] azkaban.session.max_number_per_ip_per_user is not configured. The number of sessions per IP per user is not being capped.
+2020/12/04 09:56:41.950 +0800  INFO [LoginAbstractAzkabanServlet] [Test worker] 127.0.0.1 user "POST null - null" not-browser
+2020/12/04 09:56:41.958 +0800  WARN [SessionCache] [Test worker] azkaban.session.max_number_per_ip_per_user is not configured. The number of sessions per IP per user is not being capped.
+2020/12/04 09:56:41.962 +0800  INFO [LoginAbstractAzkabanServlet] [Test worker] 127.0.0.2 user "POST null - null" not-browser
+2020/12/04 09:56:41.970 +0800  WARN [SessionCache] [Test worker] azkaban.session.max_number_per_ip_per_user is not configured. The number of sessions per IP per user is not being capped.
+2020/12/04 09:56:41.973 +0800  INFO [LoginAbstractAzkabanServlet] [Test worker] 127.0.0.1 user "GET null - null" not-browser
+2020/12/04 09:56:41.980 +0800  WARN [SessionCache] [Test worker] azkaban.session.max_number_per_ip_per_user is not configured. The number of sessions per IP per user is not being capped.
+2020/12/04 09:56:41.984 +0800  INFO [LoginAbstractAzkabanServlet] [Test worker] 192.168.1.1 user "POST null - null" not-browser
+2020/12/04 09:56:41.993 +0800  WARN [SessionCache] [Test worker] azkaban.session.max_number_per_ip_per_user is not configured. The number of sessions per IP per user is not being capped.
+2020/12/04 09:56:41.997 +0800  INFO [LoginAbstractAzkabanServlet] [Test worker] 127.0.0.1 user "POST null - null" not-browser
+2020/12/04 09:56:42.003 +0800  WARN [SessionCache] [Test worker] azkaban.session.max_number_per_ip_per_user is not configured. The number of sessions per IP per user is not being capped.
+2020/12/04 09:56:42.006 +0800  INFO [LoginAbstractAzkabanServlet] [Test worker] 192.168.1.1 user "POST null - null" not-browser
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

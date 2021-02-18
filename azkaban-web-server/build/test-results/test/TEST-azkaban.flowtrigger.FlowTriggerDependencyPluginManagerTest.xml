@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="azkaban.flowtrigger.FlowTriggerDependencyPluginManagerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-12-04T01:56:19" hostname="MSI" time="0.127">
+  <properties/>
+  <testcase name="testPluginLoading" classname="azkaban.flowtrigger.FlowTriggerDependencyPluginManagerTest" time="0.127"/>
+  <system-out><![CDATA[2020/12/04 09:56:19.252 +0800  INFO [FlowTriggerDependencyPluginManager] [Test worker] adding to classpath file:/D:/AzkabanOri/azkaban-web-server/src/test/resources/az-flow-trigger-dependency-plugin.jar
+2020/12/04 09:56:19.264 +0800  INFO [FlowTriggerDependencyPluginManager] [Test worker] adding to classpath file:/D:/AzkabanOri/azkaban-web-server/src/test/resources/az-flow-trigger-dependency-plugin.jar
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

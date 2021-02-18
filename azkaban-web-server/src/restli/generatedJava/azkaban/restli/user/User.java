@@ -15,16 +15,18 @@ import com.linkedin.data.template.SetMode;
 
 
 /**
- * Azkaban User restli info
+ * Azkaban User restli info
+
  * 
  * 
  */
 @Generated(value = "com.linkedin.pegasus.generator.JavaCodeUtil", comments = "Rest.li Data Template. Generated from D:\\AzkabanOri\\azkaban-web-server\\src\\restli\\schemas\\azkaban\\restli\\user\\User.pdl.")
 public class User
     extends RecordTemplate
+
 {
 
-    private final static User.Fields _fields = new User.Fields();
+    private  static User.Fields _fields = new User.Fields();
     private final static RecordDataSchema SCHEMA = ((RecordDataSchema) DataTemplateUtil.parseSchema("namespace azkaban.restli.user/**Azkaban User restli info\r\n*/record User{userId:string,email:string}", SchemaFormatType.PDL));
     private final static RecordDataSchema.Field FIELD_UserId = SCHEMA.getField("userId");
     private final static RecordDataSchema.Field FIELD_Email = SCHEMA.getField("email");

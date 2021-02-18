@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="azkaban.flowtrigger.FlowTriggerInstanceLoaderTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2020-12-04T01:56:21" hostname="MSI" time="6.756">
+  <properties/>
+  <testcase name="testUpdateAssociatedFlowExecId" classname="azkaban.flowtrigger.FlowTriggerInstanceLoaderTest" time="0.148"/>
+  <testcase name="testGetEmptyTriggerInstancesStartTimeDesc" classname="azkaban.flowtrigger.FlowTriggerInstanceLoaderTest" time="0.014"/>
+  <testcase name="testUpdateDependencyExecutionStatus" classname="azkaban.flowtrigger.FlowTriggerInstanceLoaderTest" time="0.032"/>
+  <testcase name="testGetRecentlyFinishedReturnsEmpty" classname="azkaban.flowtrigger.FlowTriggerInstanceLoaderTest" time="0.032"/>
+  <testcase name="testGetTriggerInstancesStartTimeDesc" classname="azkaban.flowtrigger.FlowTriggerInstanceLoaderTest" time="0.109"/>
+  <testcase name="testGetRunningTriggerInstances" classname="azkaban.flowtrigger.FlowTriggerInstanceLoaderTest" time="1.609"/>
+  <testcase name="testDeleteOldTriggerInstances" classname="azkaban.flowtrigger.FlowTriggerInstanceLoaderTest" time="3.08"/>
+  <testcase name="testGetRunningTriggerInstancesReturnsEmpty" classname="azkaban.flowtrigger.FlowTriggerInstanceLoaderTest" time="0.011"/>
+  <testcase name="testGetIncompleteTriggerInstances" classname="azkaban.flowtrigger.FlowTriggerInstanceLoaderTest" time="0.056"/>
+  <testcase name="testUploadTriggerInstance" classname="azkaban.flowtrigger.FlowTriggerInstanceLoaderTest" time="0.027"/>
+  <testcase name="testGetRecentlyFinished" classname="azkaban.flowtrigger.FlowTriggerInstanceLoaderTest" time="1.632"/>
+  <testcase name="testGetIncompleteTriggerInstancesReturnsEmpty" classname="azkaban.flowtrigger.FlowTriggerInstanceLoaderTest" time="0.004"/>
+  <system-out><![CDATA[2020/12/04 09:56:20.258 +0800  INFO [DatabaseSetup] [Test worker] Creating new table projects
+2020/12/04 09:56:20.330 +0800  INFO [DatabaseSetup] [Test worker] Creating new table project_files
+2020/12/04 09:56:20.334 +0800  INFO [DatabaseSetup] [Test worker] Creating new table project_flow_files
+2020/12/04 09:56:20.337 +0800  INFO [DatabaseSetup] [Test worker] Creating new table ramp_items
+2020/12/04 09:56:20.341 +0800  INFO [DatabaseSetup] [Test worker] Creating new table execution_jobs
+2020/12/04 09:56:20.345 +0800  INFO [DatabaseSetup] [Test worker] Creating new table project_flows
+2020/12/04 09:56:20.348 +0800  INFO [DatabaseSetup] [Test worker] Creating new table project_versions
+2020/12/04 09:56:20.351 +0800  INFO [DatabaseSetup] [Test worker] Creating new table ramp_dependency
+2020/12/04 09:56:20.354 +0800  INFO [DatabaseSetup] [Test worker] Creating new table ramp_exceptional_job_items
+2020/12/04 09:56:20.357 +0800  INFO [DatabaseSetup] [Test worker] Creating new table execution_flows
+2020/12/04 09:56:20.363 +0800  INFO [DatabaseSetup] [Test worker] Creating new table project_permissions
+2020/12/04 09:56:20.367 +0800  INFO [DatabaseSetup] [Test worker] Creating new table execution_logs
+2020/12/04 09:56:20.371 +0800  INFO [DatabaseSetup] [Test worker] Creating new table executor_events
+2020/12/04 09:56:20.373 +0800  INFO [DatabaseSetup] [Test worker] Creating new table ramp
+2020/12/04 09:56:20.376 +0800  INFO [DatabaseSetup] [Test worker] Creating new table ramp_exceptional_flow_items
+2020/12/04 09:56:20.377 +0800  INFO [DatabaseSetup] [Test worker] Creating new table triggers
+2020/12/04 09:56:20.382 +0800  INFO [DatabaseSetup] [Test worker] Creating new table execution_dependencies
+2020/12/04 09:56:20.384 +0800  INFO [DatabaseSetup] [Test worker] Creating new table project_events
+2020/12/04 09:56:20.386 +0800  INFO [DatabaseSetup] [Test worker] Creating new table active_sla
+2020/12/04 09:56:20.388 +0800  INFO [DatabaseSetup] [Test worker] Creating new table active_executing_flows
+2020/12/04 09:56:20.390 +0800  INFO [DatabaseSetup] [Test worker] Creating new table validated_dependencies
+2020/12/04 09:56:20.392 +0800  INFO [DatabaseSetup] [Test worker] Creating new table executors
+2020/12/04 09:56:20.399 +0800  INFO [DatabaseSetup] [Test worker] Creating new table project_properties
+2020/12/04 09:56:20.402 +0800  INFO [DatabaseSetup] [Test worker] Creating new table properties
+2020/12/04 09:56:20.404 +0800  INFO [DatabaseSetup] [Test worker] Creating new table quartz-tables-all
+2020/12/04 09:56:20.480 +0800  INFO [JdbcProjectImpl] [Test worker] project temporary folder is being constructed.
+2020/12/04 09:56:20.708 +0800  INFO [Project] [Test worker] AzkabanEventReporter is not configured
+2020/12/04 09:56:21.106 +0800  INFO [JdbcProjectImpl] [Test worker] Uploading flow file flow_trigger.flow, version 1 for project 123, version 3, file length is [1444 bytes]
+2020/12/04 09:56:21.137 +0800  INFO [JdbcProjectImpl] [Test worker] Read bytes for flow_trigger.flow, size:1444
+2020/12/04 09:56:21.331 +0800 ERROR [FlowLoaderUtils] [Test worker] Failed to delete the directory
+java.io.IOException: Unable to delete file: C:\Users\59775\AppData\Local\Temp\1607046981320-0\flow_trigger.flow
+	at org.apache.commons.io.FileUtils.forceDelete(FileUtils.java:2279)
+	at org.apache.commons.io.FileUtils.cleanDirectory(FileUtils.java:1653)
+	at org.apache.commons.io.FileUtils.deleteDirectory(FileUtils.java:1535)
+	at azkaban.project.FlowLoaderUtils.cleanUpDir(FlowLoaderUtils.java:290)
+	at azkaban.flowtrigger.database.JdbcFlowTriggerInstanceLoaderImpl.populateFlowTriggerProperties(JdbcFlowTriggerInstanceLoaderImpl.java:338)
+	at azkaban.flowtrigger.database.JdbcFlowTriggerInstanceLoaderImpl.getTriggerInstanceById(JdbcFlowTriggerInstanceLoaderImpl.java:434)
+	at azkaban.flowtrigger.FlowTriggerInstanceLoaderTest.testUpdateDependencyExecutionStatus(FlowTriggerInstanceLoaderTest.java:199)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:116)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:59)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:39)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:66)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy1.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:146)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:128)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
+	at java.lang.Thread.run(Thread.java:748)
+2020/12/04 09:56:26.152 +0800  INFO [JdbcFlowTriggerInstanceLoaderImpl] [Test worker] 0 dependency instance record(s) deleted
+2020/12/04 09:56:26.160 +0800  INFO [JdbcFlowTriggerInstanceLoaderImpl] [Test worker] 0 dependency instance record(s) deleted
+2020/12/04 09:56:26.178 +0800  INFO [JdbcFlowTriggerInstanceLoaderImpl] [Test worker] 16 dependency instance record(s) deleted
+2020/12/04 09:56:26.205 +0800 ERROR [FlowLoaderUtils] [Test worker] Failed to delete the directory
+java.io.IOException: Unable to delete file: C:\Users\59775\AppData\Local\Temp\1607046986197-0\flow_trigger.flow
+	at org.apache.commons.io.FileUtils.forceDelete(FileUtils.java:2279)
+	at org.apache.commons.io.FileUtils.cleanDirectory(FileUtils.java:1653)
+	at org.apache.commons.io.FileUtils.deleteDirectory(FileUtils.java:1535)
+	at azkaban.project.FlowLoaderUtils.cleanUpDir(FlowLoaderUtils.java:290)
+	at azkaban.flowtrigger.database.JdbcFlowTriggerInstanceLoaderImpl.getIncompleteTriggerInstances(JdbcFlowTriggerInstanceLoaderImpl.java:202)
+	at azkaban.flowtrigger.FlowTriggerInstanceLoaderTest.testGetIncompleteTriggerInstances(FlowTriggerInstanceLoaderTest.java:271)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:116)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:59)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:39)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:66)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy1.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:146)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:128)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
+	at java.lang.Thread.run(Thread.java:748)
+2020/12/04 09:56:26.264 +0800 ERROR [FlowLoaderUtils] [Test worker] Failed to delete the directory
+java.io.IOException: Unable to delete file: C:\Users\59775\AppData\Local\Temp\1607046986248-0\flow_trigger.flow
+	at org.apache.commons.io.FileUtils.forceDelete(FileUtils.java:2279)
+	at org.apache.commons.io.FileUtils.cleanDirectory(FileUtils.java:1653)
+	at org.apache.commons.io.FileUtils.deleteDirectory(FileUtils.java:1535)
+	at azkaban.project.FlowLoaderUtils.cleanUpDir(FlowLoaderUtils.java:290)
+	at azkaban.flowtrigger.database.JdbcFlowTriggerInstanceLoaderImpl.populateFlowTriggerProperties(JdbcFlowTriggerInstanceLoaderImpl.java:338)
+	at azkaban.flowtrigger.database.JdbcFlowTriggerInstanceLoaderImpl.getTriggerInstanceById(JdbcFlowTriggerInstanceLoaderImpl.java:434)
+	at azkaban.flowtrigger.FlowTriggerInstanceLoaderTest.testUploadTriggerInstance(FlowTriggerInstanceLoaderTest.java:142)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:116)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:59)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:39)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:66)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy1.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:146)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:128)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
+	at java.lang.Thread.run(Thread.java:748)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

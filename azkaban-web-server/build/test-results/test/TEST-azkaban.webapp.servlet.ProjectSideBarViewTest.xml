@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="azkaban.webapp.servlet.ProjectSideBarViewTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-12-04T01:56:43" hostname="MSI" time="0.136">
+  <properties/>
+  <testcase name="testProjectSideBarView" classname="azkaban.webapp.servlet.ProjectSideBarViewTest" time="0.136"/>
+  <system-out><![CDATA[2020/12/04 09:56:43.026 +0800  INFO [Project] [Test worker] AzkabanEventReporter is not configured
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

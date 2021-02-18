@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="azkaban.flowtrigger.TriggerInstanceTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2020-12-04T01:56:30" hostname="MSI" time="0.004">
+  <properties/>
+  <testcase name="testTriggerInstanceStartTime" classname="azkaban.flowtrigger.TriggerInstanceTest" time="0.003"/>
+  <testcase name="testTriggerInstanceSucceededStatus" classname="azkaban.flowtrigger.TriggerInstanceTest" time="0.0"/>
+  <testcase name="testTriggerInstanceEndTime" classname="azkaban.flowtrigger.TriggerInstanceTest" time="0.001"/>
+  <testcase name="testTriggerInstanceCancelledStatus" classname="azkaban.flowtrigger.TriggerInstanceTest" time="0.0"/>
+  <testcase name="testTriggerInstanceCancellingStatus" classname="azkaban.flowtrigger.TriggerInstanceTest" time="0.0"/>
+  <testcase name="testTriggerInstanceRunningStatus" classname="azkaban.flowtrigger.TriggerInstanceTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

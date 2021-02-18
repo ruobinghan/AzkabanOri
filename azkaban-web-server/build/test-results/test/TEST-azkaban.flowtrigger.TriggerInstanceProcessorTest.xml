@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="azkaban.flowtrigger.TriggerInstanceProcessorTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-12-04T01:56:30" hostname="MSI" time="0.248">
+  <properties/>
+  <testcase name="testProcessTermination" classname="azkaban.flowtrigger.TriggerInstanceProcessorTest" time="0.197"/>
+  <testcase name="testProcessSucceed" classname="azkaban.flowtrigger.TriggerInstanceProcessorTest" time="0.048"/>
+  <testcase name="testNewInstance" classname="azkaban.flowtrigger.TriggerInstanceProcessorTest" time="0.003"/>
+  <system-out><![CDATA[2020/12/04 09:56:30.595 +0800  INFO [Project] [Test worker] AzkabanEventReporter is not configured
+2020/12/04 09:56:30.619 +0800  INFO [Project] [Test worker] AzkabanEventReporter is not configured
+2020/12/04 09:56:30.667 +0800  INFO [Project] [Test worker] AzkabanEventReporter is not configured
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

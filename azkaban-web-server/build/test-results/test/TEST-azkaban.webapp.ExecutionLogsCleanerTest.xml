@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="azkaban.webapp.ExecutionLogsCleanerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-12-04T01:56:34" hostname="MSI" time="5.101">
+  <properties/>
+  <testcase name="checkIfExecutionCleanerGetsTriggered" classname="azkaban.webapp.ExecutionLogsCleanerTest" time="5.101"/>
+  <system-out><![CDATA[2020/12/04 09:56:34.216 +0800  INFO [ExecutionLogsCleaner] [Test worker] Starting execution logs clean up thread
+2020/12/04 09:56:34.218 +0800  INFO [ExecutionLogsCleaner] [azk-execlog-cleaner] Cleaning old logs from execution_logs
+2020/12/04 09:56:34.368 +0800  INFO [ExecutionLogsCleaner] [azk-execlog-cleaner] Cleaning old log files before 2020-09-11T09:56:34.218+08:00
+2020/12/04 09:56:34.369 +0800  INFO [ExecutionLogsCleaner] [azk-execlog-cleaner] Cleaned up 0 log entries.
+2020/12/04 09:56:34.369 +0800  INFO [ExecutionLogsCleaner] [azk-execlog-cleaner] log clean up time: 1 ms.
+2020/12/04 09:56:36.218 +0800  INFO [ExecutionLogsCleaner] [azk-execlog-cleaner] Cleaning old logs from execution_logs
+2020/12/04 09:56:36.218 +0800  INFO [ExecutionLogsCleaner] [azk-execlog-cleaner] Cleaning old log files before 2020-09-11T09:56:36.218+08:00
+2020/12/04 09:56:36.218 +0800  INFO [ExecutionLogsCleaner] [azk-execlog-cleaner] Cleaned up 0 log entries.
+2020/12/04 09:56:36.218 +0800  INFO [ExecutionLogsCleaner] [azk-execlog-cleaner] log clean up time: 0 ms.
+2020/12/04 09:56:38.219 +0800  INFO [ExecutionLogsCleaner] [azk-execlog-cleaner] Cleaning old logs from execution_logs
+2020/12/04 09:56:38.219 +0800  INFO [ExecutionLogsCleaner] [azk-execlog-cleaner] Cleaning old log files before 2020-09-11T09:56:38.219+08:00
+2020/12/04 09:56:38.219 +0800  INFO [ExecutionLogsCleaner] [azk-execlog-cleaner] Cleaned up 0 log entries.
+2020/12/04 09:56:38.219 +0800  INFO [ExecutionLogsCleaner] [azk-execlog-cleaner] log clean up time: 0 ms.
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

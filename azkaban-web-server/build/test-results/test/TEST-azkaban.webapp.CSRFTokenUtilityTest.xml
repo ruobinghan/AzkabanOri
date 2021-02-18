@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="azkaban.webapp.CSRFTokenUtilityTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-12-04T01:56:33" hostname="MSI" time="1.073">
+  <properties/>
+  <testcase name="assertConsistentHash" classname="azkaban.webapp.CSRFTokenUtilityTest" time="1.072"/>
+  <testcase name="assertSingleton" classname="azkaban.webapp.CSRFTokenUtilityTest" time="0.0"/>
+  <testcase name="assertUniqueHash" classname="azkaban.webapp.CSRFTokenUtilityTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
