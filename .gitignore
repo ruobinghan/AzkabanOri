@@ -13,11 +13,11 @@ Gemfile.lock
 vendor/
 **/velocity.log
 docs/_build/
-
+local/azkaban-webserver.log
 executor.port
 
 # local & temp directories are ignored so that they can be used to store temporary files such as local testing configurations.
-local/
+#local/
 temp/
 #conf/
 projects/
