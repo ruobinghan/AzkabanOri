@@ -19,7 +19,7 @@ executor.port
 # local & temp directories are ignored so that they can be used to store temporary files such as local testing configurations.
 local/
 temp/
-conf/
+#conf/
 projects/
 LOCAL_STORAGE/
 
