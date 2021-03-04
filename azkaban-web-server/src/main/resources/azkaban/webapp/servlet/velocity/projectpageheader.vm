@@ -37,9 +37,12 @@
             <span class="glyphicon glyphicon-download"></span> Download
           </a>
           <a class="btn btn-sm btn-info"
-             href="${context}/view?action=uploadView&json=asdf">
-            <span class="glyphicon glyphicon-download"></span> View
+             href="${context}/manager?project=${project.name}&view=true">
+            <span class="glyphicon glyphicon-download"></span> Edit-View
            </a>
+          <button class="btn btn-sm btn-info" id="xff">
+            <span class="glyphicon glyphicon-download"></span> Commit-View
+           </button>
         </div>
       </div>
     </div>

@@ -11,8 +11,6 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-
-
 public class YamlMethods {
     private  String filePath= PathParam.zipPath+ PathParam.flowName;
     private List<Map> nodeList;
@@ -57,7 +55,7 @@ public class YamlMethods {
         map.put("nodes",nodeList);
 
         String yamlFile=yaml.dump(map);
-        UDF.saveAsFileWriter(yamlFile,filePath);
+        UDF.writeFile(yamlFile,filePath);
         System.out.println(yamlFile);
     }
 }

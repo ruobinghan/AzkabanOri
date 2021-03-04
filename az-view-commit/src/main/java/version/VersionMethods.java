@@ -1,12 +1,17 @@
 package version;
 
+import org.apache.log4j.Logger;
 import param.PathParam;
+import udf.UDF;
+import zip.JarMethods;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
 public class VersionMethods {
+    private static final Logger log = Logger.getLogger(VersionMethods.class);
+
     public static String versionPath;
 
     public VersionMethods(){
@@ -14,18 +19,14 @@ public class VersionMethods {
     }
 
     public void wrtieVersionProject() throws IOException {
-        System.out.println("清空version.project内容");
-        System.out.println(versionPath);
+
         File file = new File(versionPath);
         if (!file.exists()){
             file.createNewFile();
         }
-        FileWriter fileWriter = new FileWriter(file);
-        fileWriter.write("");
 
-        System.out.println("清空version.project内容，开始写入内容");
-        fileWriter.write("azkaban-flow-version: 2.0");
-        fileWriter.flush();
-        System.out.println("写入内容完成");
+        UDF.writeFile("azkaban-flow-version: 2.0",versionPath);
+        log.info("version file completed");
+
     }
 }

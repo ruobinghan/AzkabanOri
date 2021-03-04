@@ -1,10 +1,11 @@
 package udf;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import org.apache.log4j.Logger;
+
+import java.io.*;
 
 public class UDF {
+    private static final Logger log = Logger.getLogger(UDF.class);
     /**
      * 清空目录下的文件
      * @param filePath 指定所清空的目录
@@ -27,14 +28,12 @@ public class UDF {
                     }
                 }
             }
-
         }else {
-            System.out.println("清空 "+filePath+"失败！！！");
+            log.info("清空 "+filePath+"失败！！！");
             flag = false;
         }
-
         if(flag==true){
-            System.out.println("清空 "+filePath+"成功!");
+            log.info("清空 "+filePath+"成功!");
         }
         return flag;
     }
@@ -48,27 +47,20 @@ public class UDF {
             }
             System.out.println("testFile:"+testFile);
         }catch (Exception e){
-            e.printStackTrace();
+           log.error(e.getMessage());
         }
     }
 
     /**将指定内容写入文件*/
-    public  static void saveAsFileWriter(String content,String filePath) {
-        FileWriter fwriter = null;
-        try {
-            // true表示不覆盖原来的内容，而是加到文件的后面。若要覆盖原来的内容，直接省略这个参数就好
-            //fwriter = new FileWriter(filePath,true);
-            fwriter = new FileWriter(filePath);
-            fwriter.write(content);
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        } finally {
-            try {
-                fwriter.flush();
-                fwriter.close();
-            } catch (IOException ex) {
-                ex.printStackTrace();
-            }
+    public  static void writeFile(String content,String filePath) {
+        try{
+            OutputStreamWriter out = new OutputStreamWriter(new FileOutputStream(filePath),"utf-8");
+            out.write(content);
+            out.flush();
+            out.close();
+
+        }catch(IOException e){
+            log.error(e.getMessage());
         }
     }
 }

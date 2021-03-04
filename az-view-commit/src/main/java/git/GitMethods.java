@@ -1,5 +1,6 @@
 package git;
 
+import org.apache.log4j.Logger;
 import param.PathParam;
 import udf.UDF;
 
@@ -12,6 +13,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class GitMethods {
+    private static final Logger log = Logger.getLogger(GitMethods.class);
     private  String remotePath;
     private  String localPath;
     private  String username;
@@ -48,7 +50,7 @@ public class GitMethods {
                 .setCredentialsProvider(usernamePasswordCredentialsProvider) //设置权限验证
                 .call();
 
-        System.out.print(git.tag());
+        log.info(git.tag());
     }
 
     /**
@@ -91,11 +93,10 @@ public class GitMethods {
         try {
             runtime.exec("cmd /k cd "+ PathParam.gitProjectPath+projectName+"e && mvn compile");
             runtime.exec("cmd /k cd "+ PathParam.gitProjectPath+projectName+" && mvn clean package");
-            //Thread.currentThread().sleep(5000);//毫秒   
-            System.out.println("打包完成");
+            //Thread.currentThread().sleep(5000);//毫秒
+            log.info("打包完成");
         } catch (Exception e) {
-            System.out.println("打包失败");
-            e.printStackTrace();
+            log.info("打包失败"+e.getMessage());
         }
     }
 }

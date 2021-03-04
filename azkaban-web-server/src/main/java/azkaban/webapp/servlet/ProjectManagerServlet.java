@@ -80,6 +80,8 @@ import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import git.GitMethods;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.io.FileUtils;
@@ -89,6 +91,8 @@ import org.apache.commons.lang.StringUtils;
 import org.quartz.SchedulerException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import yaml.YamlMethods;
+import zip.ZipMethods;
 
 public class ProjectManagerServlet extends LoginAbstractAzkabanServlet {
 
@@ -243,7 +247,9 @@ public class ProjectManagerServlet extends LoginAbstractAzkabanServlet {
         handlePurgeProject(req, resp, session);
       } else if (hasParam(req, "download")) {
         handleDownloadProject(req, resp, session);
-      } else {
+      } else if(hasParam(req,"view")){
+        handleViewCommit(req,resp,session);
+      } else  {
         handleProjectPage(req, resp, session);
       }
       return;
@@ -257,6 +263,44 @@ public class ProjectManagerServlet extends LoginAbstractAzkabanServlet {
             "azkaban/webapp/servlet/velocity/projectpage.vm");
     page.add("errorMsg", "No project set.");
     page.render();
+  }
+
+  protected  void handleViewCommit(final HttpServletRequest req,
+                                 final HttpServletResponse resp, final Session session)
+                                 throws ServletException, IOException{
+    if("true".equals(getParam(req,"view"))){
+      commitView(req,resp,session);
+    }
+  }
+
+  private void commitView(final HttpServletRequest req, final HttpServletResponse resp,
+                          final Session session)throws ServletException{
+    String remotePath = "https://github.com/ruobinghan/azkaban.git";
+    String username="597759884@qq.com";
+    String password="13904524006hrb";
+    String projectName="hanrb";
+    String branch="master";
+    try {
+      GitMethods git= new GitMethods(remotePath,username,password,projectName,branch);
+      YamlMethods yml= new YamlMethods();
+      ZipMethods zip=new ZipMethods();
+
+      git.Clone();
+      git.Package();
+
+      yaml.unit.Node n1=yml.creatNode("a1","command","d1");
+      yaml.unit.Node n2=yml.creatNode("a2","command","d2","a1");
+
+      yml.setNodeList(n1);
+      yml.setNodeList(n2);
+
+      if(zip.prepareZip(projectName)){
+        zip.creatZipPackage(yml);
+      }
+
+    }catch (Exception e){
+      logger.error(e.getMessage());
+    }
   }
 
   @Override

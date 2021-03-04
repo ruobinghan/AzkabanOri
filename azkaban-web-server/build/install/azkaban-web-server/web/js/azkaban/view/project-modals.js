@@ -20,12 +20,30 @@ var projectView;
 azkaban.ProjectView = Backbone.View.extend({
   events: {
     "click #project-upload-btn": "handleUploadProjectJob",
-    "click #project-delete-btn": "handleDeleteProject"
+    "click #project-delete-btn": "handleDeleteProject",
+    "click #xff": "handleXff"
   },
 
   initialize: function (settings) {
   },
 
+ handleXff:function(evt){
+    console.log("xff");
+
+        var requestURL = contextURL + "/manager";
+        var requestData = {
+          "project": projectName,
+          "view": true
+        };
+        var successHandler = function (data) {
+          if (data.error) {
+            console.log("error",data.error)
+            return;
+          }
+          console.log("success")
+        };
+        $.get(requestURL, requestData, successHandler, "json");
+ },
   handleUploadProjectJob: function (evt) {
     console.log("click upload project");
     $('#upload-project-modal').modal();
