@@ -16787,3 +16787,807 @@ Caused by: org.apache.http.client.HttpResponseException: <html>
 2021/03/04 18:13:14.831 +0800  INFO [InMemoryMetricEmitter] [azk-metric-pool-0] [Azkaban] First time capturing metric: NumQueuedFlowMetric
 2021/03/04 18:14:14.467 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
 2021/03/04 18:14:14.467 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/04 19:47:06.072 +0800  INFO [AzkabanWebServer] [main] [Azkaban] Starting Azkaban Server
+2021/03/04 19:47:06.072 +0800  INFO [AzkabanWebServer] [main] [Azkaban] Using conf at D:\Az-View\local\conf
+2021/03/04 19:47:06.104 +0800  INFO [AzkabanServer] [main] [Azkaban] Loading azkaban settings file from local/conf
+2021/03/04 19:47:06.104 +0800  INFO [AzkabanServer] [main] [Azkaban] Loading azkaban properties file
+2021/03/04 19:47:06.104 +0800  INFO [AzkabanDatabaseUpdater] [main] [Azkaban] Use scripting directory azkaban-db/src/main/sql
+2021/03/04 19:47:06.104 +0800  INFO [AzkabanDatabaseUpdater] [main] [Azkaban] Will auto update any changes.
+2021/03/04 19:47:06.120 +0800  INFO [DataSourceUtils] [main] [Azkaban] h2 DB path: D:\Az-View\local\h2
+2021/03/04 19:47:06.158 +0800  INFO [AzkabanDatabaseSetup] [main] [Azkaban] Searching for installed tables
+2021/03/04 19:47:06.438 +0800  INFO [AzkabanDatabaseSetup] [main] [Azkaban] Searching for table versions in the properties table
+2021/03/04 19:47:06.469 +0800  INFO [AzkabanDatabaseUpdater] [main] [Azkaban] Everything looks up to date.
+2021/03/04 19:47:06.720 +0800  INFO [DispatchMethod] [main] [Azkaban] Value of dispatch method is : PUSH
+2021/03/04 19:47:06.972 +0800  WARN [ClusterLoader] [main] [Azkaban] cluster does not exist. No clusters are loaded.
+2021/03/04 19:47:07.052 +0800  INFO [WebServerProvider] [main] [Azkaban] Setting up connector with stats on: true
+2021/03/04 19:47:07.052 +0800  INFO [WebServerProvider] [main] [Azkaban] Starting server on port: 8081 # Max threads: 25
+2021/03/04 19:47:07.068 +0800  INFO [DispatchMethod] [main] [Azkaban] Value of dispatch method is : PUSH
+2021/03/04 19:47:07.083 +0800  WARN [StorageCleaner] [main] [Azkaban] Project cleanup disabled. All artifacts will be stored.
+2021/03/04 19:47:07.083 +0800  INFO [ValidatorUtils] [main] [Azkaban] Creating XmlValidatorManager instance (loading validators)...
+2021/03/04 19:47:07.083 +0800  WARN [XmlValidatorManager] [main] [Azkaban] Validator directory validators does not exist or is not a directory.
+2021/03/04 19:47:07.083 +0800  WARN [XmlValidatorManager] [main] [Azkaban] Azkaban properties file does not contain the key project.validators.xml.file
+2021/03/04 19:47:07.083 +0800  INFO [ValidatorUtils] [main] [Azkaban] XmlValidatorManager instance created.
+2021/03/04 19:47:07.083 +0800  INFO [AzkabanProjectLoader] [main] [Azkaban] Using temp dir: D:\Az-View\temp
+2021/03/04 19:47:07.083 +0800  INFO [AzkabanProjectLoader] [main] [Azkaban] Project version retention is set to 3
+2021/03/04 19:47:07.239 +0800  INFO [AzkabanCommonModule] [main] [Azkaban] Event reporter is not enabled
+2021/03/04 19:47:07.239 +0800  INFO [InMemoryProjectCache] [main] [Azkaban] Loading active projects.
+2021/03/04 19:47:07.239 +0800  INFO [InMemoryProjectCache] [main] [Azkaban] Loading flows from active projects.
+2021/03/04 19:47:07.255 +0800  INFO [InMemoryProjectCache] [main] [Azkaban] Time taken to initialize and load cache in milliseconds: 172
+2021/03/04 19:47:07.255 +0800  INFO [ProjectManager] [main] [Azkaban] Loading whitelisted projects.
+2021/03/04 19:47:07.255 +0800  INFO [ProjectManager] [main] [Azkaban] ProjectManager instance created.
+2021/03/04 19:47:07.309 +0800  INFO [TriggerManager] [main] [Azkaban] TriggerManager loaded.
+2021/03/04 19:47:07.309 +0800  WARN [SessionCache] [main] [Azkaban] azkaban.session.max_number_per_ip_per_user is not configured. The number of sessions per IP per user is not being capped.
+2021/03/04 19:47:07.309 +0800  INFO [AzkabanWebServerModule] [main] [Azkaban] Loading user manager class azkaban.user.XmlUserManager
+2021/03/04 19:47:07.325 +0800  INFO [XmlUserManager] [main] [Azkaban] Loading user azkaban
+2021/03/04 19:47:07.340 +0800  INFO [XmlUserManager] [main] [Azkaban] Loading user metrics
+2021/03/04 19:47:07.340 +0800  INFO [UserUtils] [main] [Azkaban] Starting configuration watching thread.
+2021/03/04 19:47:07.372 +0800  INFO [AzkabanWebServer] [main] [Azkaban] Loading built-in checker and action types
+2021/03/04 19:47:07.372 +0800  INFO [CheckerTypeLoader] [main] [Azkaban] Registering checker BasicTimeChecker
+2021/03/04 19:47:07.372 +0800  INFO [CheckerTypeLoader] [main] [Azkaban] Registering checker SlaChecker
+2021/03/04 19:47:07.372 +0800  INFO [CheckerTypeLoader] [main] [Azkaban] Registering checker ExecutionChecker
+2021/03/04 19:47:07.372 +0800  INFO [ActionTypeLoader] [main] [Azkaban] Registering action ExecuteFlowAction
+2021/03/04 19:47:07.372 +0800  INFO [ActionTypeLoader] [main] [Azkaban] Registering action KillExecutionAction
+2021/03/04 19:47:07.372 +0800  INFO [ActionTypeLoader] [main] [Azkaban] Registering action AlertAction
+2021/03/04 19:47:07.372 +0800  INFO [ActionTypeLoader] [main] [Azkaban] Registering action CreateTriggerAction
+2021/03/04 19:47:07.372 +0800  INFO [PluginCheckerAndActionsLoader] [main] [Azkaban] Loading plug-in checker and action types
+2021/03/04 19:47:07.372 +0800 ERROR [PluginCheckerAndActionsLoader] [main] [Azkaban] plugin path plugins/triggers doesn't exist!
+2021/03/04 19:47:07.387 +0800  INFO [AzkabanWebServer] [main] [Azkaban] Setting timezone to Asia/Shanghai
+2021/03/04 19:47:07.387 +0800  INFO [AzkabanWebServer] [main] [Azkaban] Registering MBeans...
+2021/03/04 19:47:07.387 +0800  INFO [MBeanRegistrationManager] [main] [Azkaban] Bean azkaban.jmx.JmxJettyServer registered.
+2021/03/04 19:47:07.387 +0800  INFO [MBeanRegistrationManager] [main] [Azkaban] Bean azkaban.jmx.JmxTriggerManager registered.
+2021/03/04 19:47:07.403 +0800  INFO [MBeanRegistrationManager] [main] [Azkaban] Bean azkaban.jmx.JmxExecutorManager registered.
+2021/03/04 19:47:07.403 +0800  INFO [MBeanRegistrationManager] [main] [Azkaban] Bean org.apache.log4j.jmx.HierarchyDynamicMBean registered.
+2021/03/04 19:47:07.403 +0800  INFO [AzkabanWebServer] [main] [Azkaban] ************* loginLoggerObjName is null, make sure there is a logger with name azkaban.webapp.servlet.LoginAbstractAzkabanServlet
+2021/03/04 19:47:07.466 +0800  INFO [FlowRunnerManager] [main] [Azkaban] useNewThreadPool: false
+2021/03/04 19:47:07.466 +0800  INFO [JobTypeManager] [main] [Azkaban] Loading plugin default job types
+2021/03/04 19:47:07.481 +0800  INFO [JobTypeManager] [main] [Azkaban] Job type plugin directory set. Loading extra job types from azkaban-solo-server\src\main\resources
+2021/03/04 19:47:07.481 +0800  INFO [JobTypeManager] [main] [Azkaban] Common plugin job props file azkaban-solo-server\src\main\resources\common.properties not found. Using only globals props
+2021/03/04 19:47:07.481 +0800  INFO [JobTypeManager] [main] [Azkaban] Common plugin load props file azkaban-solo-server\src\main\resources\commonprivate.properties found. Attempt to load.
+2021/03/04 19:47:07.481 +0800  INFO [JobTypeManager] [main] [Azkaban] Loading plugin conf
+2021/03/04 19:47:07.481 +0800  INFO [JobTypeManager] [main] [Azkaban] Plugin load props file azkaban-solo-server\src\main\resources\conf\private.properties not found.
+2021/03/04 19:47:07.481 +0800  INFO [FlowRunnerManager] [main] [Azkaban] Configuring Project Cache
+2021/03/04 19:47:07.481 +0800  INFO [FlowRunnerManager] [main] [Azkaban] Property azkaban.project_cache_size_percentage_of_disk not set. Project Cache directory will not be auto-cleaned as it gets full
+2021/03/04 19:47:07.481 +0800  INFO [DispatchMethod] [main] [Azkaban] Value of dispatch method is : PUSH
+2021/03/04 19:47:07.481 +0800  INFO [ExecJettyServerModule] [main] [Azkaban] Setting up connector with stats on: true
+2021/03/04 19:47:07.481 +0800  INFO [ExecJettyServerModule] [main] [Azkaban] Jetty connector name: 0.0.0.0:12321, default header buffer size: 4096
+2021/03/04 19:47:07.485 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 19:47:07.485 +0800  INFO [ExecJettyServerModule] [main] [Azkaban] Jetty connector name: 0.0.0.0:12321, (if) new header buffer size: 4096
+2021/03/04 19:47:07.485 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/04 19:47:07.518 +0800  INFO [JmxJobMBeanManager] [main] [Azkaban] Initializing azkaban.execapp.jmx.JmxJobMBeanManager
+2021/03/04 19:47:07.518 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Job callback enabled? true
+2021/03/04 19:47:07.518 +0800  INFO [JobCallbackManager] [main] [Azkaban] Initializing
+2021/03/04 19:47:07.518 +0800  INFO [JobCallbackRequestMaker] [main] [Azkaban] responseWaitTimeoutMS: 5000
+2021/03/04 19:47:07.518 +0800  INFO [JobCallbackRequestMaker] [main] [Azkaban] Global request configuration [expectContinueEnabled=false, proxy=null, localAddress=null, cookieSpec=null, redirectsEnabled=true, relativeRedirectsAllowed=true, maxRedirects=50, circularRedirectsAllowed=false, authenticationEnabled=true, targetPreferredAuthSchemes=null, proxyPreferredAuthSchemes=null, connectionRequestTimeout=3000, connectTimeout=3000, socketTimeout=3000, contentCompressionEnabled=true]
+2021/03/04 19:47:07.800 +0800  INFO [JobCallbackRequestMaker] [main] [Azkaban] Jobcall thread pool size: 10
+2021/03/04 19:47:07.800 +0800  INFO [JobCallbackRequestMaker] [main] [Azkaban] Initialization for azkaban.execapp.event.JobCallbackRequestMaker is completed
+2021/03/04 19:47:07.816 +0800  INFO [JobCallbackManager] [main] [Azkaban] Initialization completed azkaban.execapp.event.JobCallbackManager
+2021/03/04 19:47:07.816 +0800  INFO [JobCallbackManager] [main] [Azkaban] azkabanHostName DESKTOP-DECJGCG
+2021/03/04 19:47:07.816 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Registering MBeans...
+2021/03/04 19:47:07.816 +0800  INFO [MBeanRegistrationManager] [main] [Azkaban] Bean azkaban.jmx.JmxJettyServer registered.
+2021/03/04 19:47:07.816 +0800  INFO [MBeanRegistrationManager] [main] [Azkaban] Bean azkaban.execapp.jmx.JmxFlowRunnerManager registered.
+2021/03/04 19:47:07.816 +0800  INFO [MBeanRegistrationManager] [main] [Azkaban] Bean azkaban.execapp.jmx.JmxFlowRampManager registered.
+2021/03/04 19:47:07.816 +0800  INFO [MBeanRegistrationManager] [main] [Azkaban] Bean azkaban.execapp.jmx.JmxJobMBeanManager registered.
+2021/03/04 19:47:07.816 +0800  INFO [MBeanRegistrationManager] [main] [Azkaban] Bean azkaban.execapp.jmx.JmxJobCallback registered.
+2021/03/04 19:47:07.816 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Starting to configure Metric Reports
+2021/03/04 19:47:07.816 +0800  INFO [MetricReportManager] [main] [Azkaban] Instantiating MetricReportManager
+2021/03/04 19:47:07.816 +0800  INFO [MetricReportManager] [main] [Azkaban] Enabling Metric Manager
+2021/03/04 19:47:07.816 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Adding number of failed flow metric
+2021/03/04 19:47:07.816 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Adding number of failed jobs metric
+2021/03/04 19:47:07.816 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Adding number of running Jobs metric
+2021/03/04 19:47:07.816 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Adding number of running flows metric
+2021/03/04 19:47:07.816 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Adding number of queued flows metric
+2021/03/04 19:47:07.816 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Completed configuring Metric Reports
+2021/03/04 19:47:07.816 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] No value for property: jmx.attribute.processor.class was found
+2021/03/04 19:47:07.816 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] This executor is already in the DB. Found active=true
+2021/03/04 19:47:07.848 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] This executor is already in the DB. Found: DESKTOP-DECJGCG:12321 (id: 1), active=true
+2021/03/04 19:47:07.848 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Started Executor Server on DESKTOP-DECJGCG:12321
+2021/03/04 19:47:07.848 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Setting timezone to Asia/Shanghai
+2021/03/04 19:47:07.848 +0800  INFO [AzkabanWebServer] [main] [Azkaban] Azkaban Exec Server started...
+2021/03/04 19:47:07.848 +0800  INFO [FlowRunnerManager] [main] [Azkaban] Set active action ignored. Executor is already active
+2021/03/04 19:47:07.848 +0800  INFO [AzkabanWebServer] [main] [Azkaban] Azkaban Exec Server activated...
+2021/03/04 19:47:07.848 +0800  INFO [DataSourceUtils] [main] [Azkaban] h2 DB path: D:\Az-View\local\h2
+2021/03/04 19:47:07.848 +0800  INFO [AzkabanDatabaseSetup] [main] [Azkaban] Searching for installed tables
+2021/03/04 19:47:07.848 +0800  INFO [AzkabanDatabaseSetup] [main] [Azkaban] Searching for table versions in the properties table
+2021/03/04 19:47:07.864 +0800  INFO [ExecutorManager] [main] [Azkaban] Initializing executors from database.
+2021/03/04 19:47:07.864 +0800  INFO [ExecutorManager] [main] [Azkaban] Loading running flows from database..
+2021/03/04 19:47:07.879 +0800  INFO [ExecutorManager] [main] [Azkaban] Loaded 0 running flows
+2021/03/04 19:47:07.895 +0800  INFO [ExecutorManager] [main] [Azkaban] QueueProcessorThread active turned true
+2021/03/04 19:47:07.895 +0800  INFO [ExecutionLogsCleaner] [main] [Azkaban] Starting execution logs clean up thread
+2021/03/04 19:47:07.895 +0800  INFO [AzkabanWebServer] [main] [Azkaban] Setting up web resource dir azkaban-web-server/build/install/azkaban-web-server/web
+2021/03/04 19:47:07.895 +0800  INFO [ExecutionLogsCleaner] [azk-execlog-cleaner] [Azkaban] Cleaning old logs from execution_logs
+2021/03/04 19:47:07.926 +0800  INFO [ExecutionLogsCleaner] [azk-execlog-cleaner] [Azkaban] Cleaning old log files before 2020-12-10T19:47:07.895+08:00
+2021/03/04 19:47:07.942 +0800  INFO [JdbcTriggerImpl] [main] [Azkaban] Loading all triggers from db.
+2021/03/04 19:47:07.942 +0800  INFO [JdbcTriggerImpl] [main] [Azkaban] Loaded 0 triggers.
+2021/03/04 19:47:07.957 +0800  INFO [WebMetricsImpl] [main] [Azkaban] No metrics set up for Web server.
+2021/03/04 19:47:07.957 +0800  INFO [ProjectManagerServlet] [main] [Azkaban] downloadBufferSize: 8192
+2021/03/04 19:47:08.291 +0800  INFO [AzkabanWebServer] [main] [Azkaban] Server started
+2021/03/04 19:47:08.291 +0800  INFO [AzkabanWebServer] [main] [Azkaban] Azkaban Web Server started...
+2021/03/04 19:47:08.949 +0800  INFO [ExecutionLogsCleaner] [azk-execlog-cleaner] [Azkaban] Cleaned up 0 log entries.
+2021/03/04 19:47:08.949 +0800  INFO [ExecutionLogsCleaner] [azk-execlog-cleaner] [Azkaban] log clean up time: 1023 ms.
+2021/03/04 19:47:15.038 +0800  INFO [LoginAbstractAzkabanServlet] [10405169@qtp-837659261-0] [Azkaban] 0  -  "GET / - HTTP/1.1" browser
+2021/03/04 19:47:16.360 +0800  INFO [LoginAbstractAzkabanServlet] [1352478569@qtp-837659261-6] [Azkaban] 0  -  "POST / - HTTP/1.1" browser
+2021/03/04 19:47:16.375 +0800  INFO [LoginAbstractAzkabanServlet] [1352478569@qtp-837659261-6] [Azkaban] Session id created for user 'azkaban' and ip 0, 0 session(s) found from this IP
+2021/03/04 19:47:16.409 +0800  INFO [LoginAbstractAzkabanServlet] [1352478569@qtp-837659261-6] [Azkaban] 0 azkaban "GET / - HTTP/1.1" browser
+2021/03/04 19:47:16.414 +0800  INFO [LoginAbstractAzkabanServlet] [1352478569@qtp-837659261-6] [Azkaban] 0 azkaban "GET /index - HTTP/1.1" browser
+2021/03/04 19:47:18.204 +0800  INFO [LoginAbstractAzkabanServlet] [10405169@qtp-837659261-0] [Azkaban] 0 azkaban "GET /manager project=test HTTP/1.1" browser
+2021/03/04 19:47:19.797 +0800  INFO [LoginAbstractAzkabanServlet] [1905345243@qtp-837659261-4] [Azkaban] 0 azkaban "GET /manager project=test&view=true HTTP/1.1" browser
+2021/03/04 19:48:07.493 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 19:48:07.822 +0800  INFO [InMemoryMetricEmitter] [azk-metric-pool-0] [Azkaban] First time capturing metric: NumRunningFlowMetric
+2021/03/04 19:48:07.822 +0800  INFO [InMemoryMetricEmitter] [azk-metric-pool-3] [Azkaban] First time capturing metric: NumQueuedFlowMetric
+2021/03/04 19:48:07.822 +0800  INFO [InMemoryMetricEmitter] [azk-metric-pool-1] [Azkaban] First time capturing metric: NumFailedFlowMetric
+2021/03/04 19:48:07.822 +0800  INFO [InMemoryMetricEmitter] [azk-metric-pool-2] [Azkaban] First time capturing metric: NumFailedJobMetric
+2021/03/04 19:48:07.822 +0800  INFO [InMemoryMetricEmitter] [azk-metric-pool-0] [Azkaban] First time capturing metric: NumRunningJobMetric
+2021/03/04 19:49:07.499 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 19:49:07.499 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/04 19:50:07.501 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 19:51:07.516 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 19:51:07.516 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/04 19:52:07.523 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 19:53:07.525 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 19:53:07.525 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/04 19:54:07.538 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 19:55:07.539 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 19:55:07.539 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/04 19:56:07.549 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 19:57:07.554 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 19:57:07.554 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/04 19:58:07.561 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 19:59:07.571 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 19:59:07.571 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/04 20:00:07.583 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:01:07.585 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:01:07.585 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/04 20:02:07.595 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:03:07.608 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:03:07.608 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/04 20:04:07.616 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:05:07.620 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:05:07.620 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/04 20:06:07.624 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:07:07.628 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:07:07.628 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/04 20:08:07.632 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:09:07.634 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:09:07.635 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/04 20:10:07.638 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:11:07.652 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:11:07.652 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/04 20:12:07.661 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:13:07.676 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:13:07.676 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/04 20:14:07.680 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:15:07.681 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:15:07.681 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/04 20:16:07.687 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:17:07.691 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:17:07.691 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/04 20:18:07.704 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:19:07.716 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:19:07.716 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/04 20:20:07.731 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:21:07.736 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:21:07.736 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/04 20:22:07.745 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:23:07.756 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:23:07.756 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/04 20:24:07.758 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:25:07.770 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:25:07.770 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/04 20:26:07.772 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:27:07.782 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:27:07.782 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/04 20:28:07.793 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:29:07.805 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:29:07.805 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/04 20:30:07.806 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:31:07.811 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:31:07.811 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/04 20:32:07.819 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:33:07.821 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:33:07.821 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/04 20:34:07.828 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:35:07.834 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:35:07.834 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/04 20:36:07.844 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:37:07.852 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:37:07.852 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/04 20:38:07.854 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:39:07.864 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:39:07.864 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/04 20:40:07.870 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:41:07.879 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:41:07.879 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/04 20:42:07.885 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:43:07.888 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:43:07.888 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/04 20:44:07.899 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:45:07.902 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:45:07.902 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/04 20:46:07.912 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:47:07.907 +0800  INFO [ExecutionLogsCleaner] [azk-execlog-cleaner] [Azkaban] Cleaning old logs from execution_logs
+2021/03/04 20:47:07.907 +0800  INFO [ExecutionLogsCleaner] [azk-execlog-cleaner] [Azkaban] Cleaning old log files before 2020-12-10T20:47:07.907+08:00
+2021/03/04 20:47:07.923 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:47:07.923 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/04 20:47:08.910 +0800  INFO [ExecutionLogsCleaner] [azk-execlog-cleaner] [Azkaban] Cleaned up 0 log entries.
+2021/03/04 20:47:08.910 +0800  INFO [ExecutionLogsCleaner] [azk-execlog-cleaner] [Azkaban] log clean up time: 1003 ms.
+2021/03/04 20:48:07.925 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:49:07.931 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:49:07.931 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/04 20:50:07.932 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:51:07.947 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:51:07.947 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/04 20:52:07.954 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:53:07.962 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:53:07.962 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/04 20:54:07.962 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:55:07.962 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:56:07.976 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:56:07.976 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/04 20:57:07.980 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:58:07.984 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 20:58:07.984 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/04 20:59:07.986 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 21:00:08.000 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 21:00:08.000 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/04 21:01:08.015 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 21:02:08.028 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 21:02:08.028 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/04 21:03:08.029 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 21:04:08.033 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 21:04:08.033 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/04 21:05:08.048 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 21:06:08.053 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 21:06:08.053 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/04 21:07:08.058 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 21:08:08.061 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 21:08:08.061 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/04 21:09:08.065 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 21:10:08.073 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 21:10:08.073 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/04 21:11:08.077 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 21:12:08.078 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 21:12:08.078 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/04 21:13:08.079 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 21:14:08.086 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 21:14:08.086 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/04 21:15:08.091 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 21:16:08.092 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 21:16:08.092 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/04 21:17:08.100 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 21:18:08.111 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 21:18:08.111 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/04 21:19:08.118 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 21:20:08.118 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 21:20:08.118 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/04 21:21:08.123 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 21:22:08.133 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 21:22:08.133 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/04 21:23:08.146 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 21:24:08.159 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 21:24:08.159 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/04 21:25:08.169 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 21:26:08.172 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 21:26:08.172 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/04 21:27:08.178 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 21:28:08.193 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/04 21:28:08.193 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/05 15:55:01.425 +0800  INFO [AzkabanWebServer] [main] [Azkaban] Starting Azkaban Server
+2021/03/05 15:55:01.432 +0800  INFO [AzkabanWebServer] [main] [Azkaban] Using conf at D:\Az-View\local\conf
+2021/03/05 15:55:01.462 +0800  INFO [AzkabanServer] [main] [Azkaban] Loading azkaban settings file from local/conf
+2021/03/05 15:55:01.463 +0800  INFO [AzkabanServer] [main] [Azkaban] Loading azkaban properties file
+2021/03/05 15:55:01.472 +0800  INFO [AzkabanDatabaseUpdater] [main] [Azkaban] Use scripting directory azkaban-db/src/main/sql
+2021/03/05 15:55:01.473 +0800  INFO [AzkabanDatabaseUpdater] [main] [Azkaban] Will auto update any changes.
+2021/03/05 15:55:01.480 +0800  INFO [DataSourceUtils] [main] [Azkaban] h2 DB path: D:\Az-View\local\h2
+2021/03/05 15:55:01.537 +0800  INFO [AzkabanDatabaseSetup] [main] [Azkaban] Searching for installed tables
+2021/03/05 15:55:01.898 +0800  INFO [AzkabanDatabaseSetup] [main] [Azkaban] Searching for table versions in the properties table
+2021/03/05 15:55:01.925 +0800  INFO [AzkabanDatabaseUpdater] [main] [Azkaban] Everything looks up to date.
+2021/03/05 15:55:02.244 +0800  INFO [DispatchMethod] [main] [Azkaban] Value of dispatch method is : PUSH
+2021/03/05 15:55:02.566 +0800  WARN [ClusterLoader] [main] [Azkaban] cluster does not exist. No clusters are loaded.
+2021/03/05 15:55:02.666 +0800  INFO [WebServerProvider] [main] [Azkaban] Setting up connector with stats on: true
+2021/03/05 15:55:02.666 +0800  INFO [WebServerProvider] [main] [Azkaban] Starting server on port: 8081 # Max threads: 25
+2021/03/05 15:55:02.683 +0800  INFO [DispatchMethod] [main] [Azkaban] Value of dispatch method is : PUSH
+2021/03/05 15:55:02.692 +0800  WARN [StorageCleaner] [main] [Azkaban] Project cleanup disabled. All artifacts will be stored.
+2021/03/05 15:55:02.692 +0800  INFO [ValidatorUtils] [main] [Azkaban] Creating XmlValidatorManager instance (loading validators)...
+2021/03/05 15:55:02.693 +0800  WARN [XmlValidatorManager] [main] [Azkaban] Validator directory validators does not exist or is not a directory.
+2021/03/05 15:55:02.695 +0800  WARN [XmlValidatorManager] [main] [Azkaban] Azkaban properties file does not contain the key project.validators.xml.file
+2021/03/05 15:55:02.695 +0800  INFO [ValidatorUtils] [main] [Azkaban] XmlValidatorManager instance created.
+2021/03/05 15:55:02.695 +0800  INFO [AzkabanProjectLoader] [main] [Azkaban] Using temp dir: D:\Az-View\temp
+2021/03/05 15:55:02.695 +0800  INFO [AzkabanProjectLoader] [main] [Azkaban] Project version retention is set to 3
+2021/03/05 15:55:02.925 +0800  INFO [AzkabanCommonModule] [main] [Azkaban] Event reporter is not enabled
+2021/03/05 15:55:02.925 +0800  INFO [InMemoryProjectCache] [main] [Azkaban] Loading active projects.
+2021/03/05 15:55:02.925 +0800  INFO [InMemoryProjectCache] [main] [Azkaban] Loading flows from active projects.
+2021/03/05 15:55:02.934 +0800  INFO [InMemoryProjectCache] [main] [Azkaban] Time taken to initialize and load cache in milliseconds: 239
+2021/03/05 15:55:02.934 +0800  INFO [ProjectManager] [main] [Azkaban] Loading whitelisted projects.
+2021/03/05 15:55:02.934 +0800  INFO [ProjectManager] [main] [Azkaban] ProjectManager instance created.
+2021/03/05 15:55:03.022 +0800  INFO [TriggerManager] [main] [Azkaban] TriggerManager loaded.
+2021/03/05 15:55:03.024 +0800  WARN [SessionCache] [main] [Azkaban] azkaban.session.max_number_per_ip_per_user is not configured. The number of sessions per IP per user is not being capped.
+2021/03/05 15:55:03.026 +0800  INFO [AzkabanWebServerModule] [main] [Azkaban] Loading user manager class azkaban.user.XmlUserManager
+2021/03/05 15:55:03.091 +0800  INFO [XmlUserManager] [main] [Azkaban] Loading user azkaban
+2021/03/05 15:55:03.092 +0800  INFO [XmlUserManager] [main] [Azkaban] Loading user metrics
+2021/03/05 15:55:03.102 +0800  INFO [UserUtils] [main] [Azkaban] Starting configuration watching thread.
+2021/03/05 15:55:03.158 +0800  INFO [AzkabanWebServer] [main] [Azkaban] Loading built-in checker and action types
+2021/03/05 15:55:03.160 +0800  INFO [CheckerTypeLoader] [main] [Azkaban] Registering checker BasicTimeChecker
+2021/03/05 15:55:03.160 +0800  INFO [CheckerTypeLoader] [main] [Azkaban] Registering checker SlaChecker
+2021/03/05 15:55:03.160 +0800  INFO [CheckerTypeLoader] [main] [Azkaban] Registering checker ExecutionChecker
+2021/03/05 15:55:03.161 +0800  INFO [ActionTypeLoader] [main] [Azkaban] Registering action ExecuteFlowAction
+2021/03/05 15:55:03.161 +0800  INFO [ActionTypeLoader] [main] [Azkaban] Registering action KillExecutionAction
+2021/03/05 15:55:03.161 +0800  INFO [ActionTypeLoader] [main] [Azkaban] Registering action AlertAction
+2021/03/05 15:55:03.161 +0800  INFO [ActionTypeLoader] [main] [Azkaban] Registering action CreateTriggerAction
+2021/03/05 15:55:03.162 +0800  INFO [PluginCheckerAndActionsLoader] [main] [Azkaban] Loading plug-in checker and action types
+2021/03/05 15:55:03.163 +0800 ERROR [PluginCheckerAndActionsLoader] [main] [Azkaban] plugin path plugins/triggers doesn't exist!
+2021/03/05 15:55:03.183 +0800  INFO [AzkabanWebServer] [main] [Azkaban] Setting timezone to Asia/Shanghai
+2021/03/05 15:55:03.183 +0800  INFO [AzkabanWebServer] [main] [Azkaban] Registering MBeans...
+2021/03/05 15:55:03.191 +0800  INFO [MBeanRegistrationManager] [main] [Azkaban] Bean azkaban.jmx.JmxJettyServer registered.
+2021/03/05 15:55:03.193 +0800  INFO [MBeanRegistrationManager] [main] [Azkaban] Bean azkaban.jmx.JmxTriggerManager registered.
+2021/03/05 15:55:03.195 +0800  INFO [MBeanRegistrationManager] [main] [Azkaban] Bean azkaban.jmx.JmxExecutorManager registered.
+2021/03/05 15:55:03.209 +0800  INFO [MBeanRegistrationManager] [main] [Azkaban] Bean org.apache.log4j.jmx.HierarchyDynamicMBean registered.
+2021/03/05 15:55:03.209 +0800  INFO [AzkabanWebServer] [main] [Azkaban] ************* loginLoggerObjName is null, make sure there is a logger with name azkaban.webapp.servlet.LoginAbstractAzkabanServlet
+2021/03/05 15:55:03.345 +0800  INFO [FlowRunnerManager] [main] [Azkaban] useNewThreadPool: false
+2021/03/05 15:55:03.349 +0800  INFO [JobTypeManager] [main] [Azkaban] Loading plugin default job types
+2021/03/05 15:55:03.352 +0800  INFO [JobTypeManager] [main] [Azkaban] Job type plugin directory set. Loading extra job types from azkaban-solo-server\src\main\resources
+2021/03/05 15:55:03.353 +0800  INFO [JobTypeManager] [main] [Azkaban] Common plugin job props file azkaban-solo-server\src\main\resources\common.properties not found. Using only globals props
+2021/03/05 15:55:03.353 +0800  INFO [JobTypeManager] [main] [Azkaban] Common plugin load props file azkaban-solo-server\src\main\resources\commonprivate.properties found. Attempt to load.
+2021/03/05 15:55:03.362 +0800  INFO [JobTypeManager] [main] [Azkaban] Loading plugin conf
+2021/03/05 15:55:03.363 +0800  INFO [JobTypeManager] [main] [Azkaban] Plugin load props file azkaban-solo-server\src\main\resources\conf\private.properties not found.
+2021/03/05 15:55:03.363 +0800  INFO [FlowRunnerManager] [main] [Azkaban] Configuring Project Cache
+2021/03/05 15:55:03.363 +0800  INFO [FlowRunnerManager] [main] [Azkaban] Property azkaban.project_cache_size_percentage_of_disk not set. Project Cache directory will not be auto-cleaned as it gets full
+2021/03/05 15:55:03.365 +0800  INFO [DispatchMethod] [main] [Azkaban] Value of dispatch method is : PUSH
+2021/03/05 15:55:03.365 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/05 15:55:03.365 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/05 15:55:03.365 +0800  INFO [ExecJettyServerModule] [main] [Azkaban] Setting up connector with stats on: true
+2021/03/05 15:55:03.365 +0800  INFO [ExecJettyServerModule] [main] [Azkaban] Jetty connector name: 0.0.0.0:12321, default header buffer size: 4096
+2021/03/05 15:55:03.366 +0800  INFO [ExecJettyServerModule] [main] [Azkaban] Jetty connector name: 0.0.0.0:12321, (if) new header buffer size: 4096
+2021/03/05 15:55:03.413 +0800  INFO [JmxJobMBeanManager] [main] [Azkaban] Initializing azkaban.execapp.jmx.JmxJobMBeanManager
+2021/03/05 15:55:03.413 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Job callback enabled? true
+2021/03/05 15:55:03.416 +0800  INFO [JobCallbackManager] [main] [Azkaban] Initializing
+2021/03/05 15:55:03.418 +0800  INFO [JobCallbackRequestMaker] [main] [Azkaban] responseWaitTimeoutMS: 5000
+2021/03/05 15:55:03.420 +0800  INFO [JobCallbackRequestMaker] [main] [Azkaban] Global request configuration [expectContinueEnabled=false, proxy=null, localAddress=null, cookieSpec=null, redirectsEnabled=true, relativeRedirectsAllowed=true, maxRedirects=50, circularRedirectsAllowed=false, authenticationEnabled=true, targetPreferredAuthSchemes=null, proxyPreferredAuthSchemes=null, connectionRequestTimeout=3000, connectTimeout=3000, socketTimeout=3000, contentCompressionEnabled=true]
+2021/03/05 15:55:03.831 +0800  INFO [JobCallbackRequestMaker] [main] [Azkaban] Jobcall thread pool size: 10
+2021/03/05 15:55:03.833 +0800  INFO [JobCallbackRequestMaker] [main] [Azkaban] Initialization for azkaban.execapp.event.JobCallbackRequestMaker is completed
+2021/03/05 15:55:03.837 +0800  INFO [JobCallbackManager] [main] [Azkaban] Initialization completed azkaban.execapp.event.JobCallbackManager
+2021/03/05 15:55:03.838 +0800  INFO [JobCallbackManager] [main] [Azkaban] azkabanHostName DESKTOP-DECJGCG
+2021/03/05 15:55:03.838 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Registering MBeans...
+2021/03/05 15:55:03.838 +0800  INFO [MBeanRegistrationManager] [main] [Azkaban] Bean azkaban.jmx.JmxJettyServer registered.
+2021/03/05 15:55:03.840 +0800  INFO [MBeanRegistrationManager] [main] [Azkaban] Bean azkaban.execapp.jmx.JmxFlowRunnerManager registered.
+2021/03/05 15:55:03.842 +0800  INFO [MBeanRegistrationManager] [main] [Azkaban] Bean azkaban.execapp.jmx.JmxFlowRampManager registered.
+2021/03/05 15:55:03.843 +0800  INFO [MBeanRegistrationManager] [main] [Azkaban] Bean azkaban.execapp.jmx.JmxJobMBeanManager registered.
+2021/03/05 15:55:03.843 +0800  INFO [MBeanRegistrationManager] [main] [Azkaban] Bean azkaban.execapp.jmx.JmxJobCallback registered.
+2021/03/05 15:55:03.843 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Starting to configure Metric Reports
+2021/03/05 15:55:03.844 +0800  INFO [MetricReportManager] [main] [Azkaban] Instantiating MetricReportManager
+2021/03/05 15:55:03.845 +0800  INFO [MetricReportManager] [main] [Azkaban] Enabling Metric Manager
+2021/03/05 15:55:03.845 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Adding number of failed flow metric
+2021/03/05 15:55:03.849 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Adding number of failed jobs metric
+2021/03/05 15:55:03.850 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Adding number of running Jobs metric
+2021/03/05 15:55:03.851 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Adding number of running flows metric
+2021/03/05 15:55:03.852 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Adding number of queued flows metric
+2021/03/05 15:55:03.852 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Completed configuring Metric Reports
+2021/03/05 15:55:03.852 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] No value for property: jmx.attribute.processor.class was found
+2021/03/05 15:55:03.854 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] This executor is already in the DB. Found active=true
+2021/03/05 15:55:03.882 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] This executor is already in the DB. Found: DESKTOP-DECJGCG:12321 (id: 1), active=true
+2021/03/05 15:55:03.884 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Started Executor Server on DESKTOP-DECJGCG:12321
+2021/03/05 15:55:03.884 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Setting timezone to Asia/Shanghai
+2021/03/05 15:55:03.885 +0800  INFO [AzkabanWebServer] [main] [Azkaban] Azkaban Exec Server started...
+2021/03/05 15:55:03.885 +0800  INFO [FlowRunnerManager] [main] [Azkaban] Set active action ignored. Executor is already active
+2021/03/05 15:55:03.885 +0800  INFO [AzkabanWebServer] [main] [Azkaban] Azkaban Exec Server activated...
+2021/03/05 15:55:03.885 +0800  INFO [DataSourceUtils] [main] [Azkaban] h2 DB path: D:\Az-View\local\h2
+2021/03/05 15:55:03.886 +0800  INFO [AzkabanDatabaseSetup] [main] [Azkaban] Searching for installed tables
+2021/03/05 15:55:03.888 +0800  INFO [AzkabanDatabaseSetup] [main] [Azkaban] Searching for table versions in the properties table
+2021/03/05 15:55:03.906 +0800  INFO [ExecutorManager] [main] [Azkaban] Initializing executors from database.
+2021/03/05 15:55:03.907 +0800  INFO [ExecutorManager] [main] [Azkaban] Loading running flows from database..
+2021/03/05 15:55:03.927 +0800  INFO [ExecutorManager] [main] [Azkaban] Loaded 0 running flows
+2021/03/05 15:55:03.931 +0800  INFO [ExecutorManager] [main] [Azkaban] QueueProcessorThread active turned true
+2021/03/05 15:55:03.932 +0800  INFO [ExecutionLogsCleaner] [main] [Azkaban] Starting execution logs clean up thread
+2021/03/05 15:55:03.933 +0800  INFO [AzkabanWebServer] [main] [Azkaban] Setting up web resource dir azkaban-web-server/build/install/azkaban-web-server/web
+2021/03/05 15:55:03.933 +0800  INFO [ExecutionLogsCleaner] [azk-execlog-cleaner] [Azkaban] Cleaning old logs from execution_logs
+2021/03/05 15:55:03.980 +0800  INFO [ExecutionLogsCleaner] [azk-execlog-cleaner] [Azkaban] Cleaning old log files before 2020-12-11T15:55:03.933+08:00
+2021/03/05 15:55:03.983 +0800  INFO [JdbcTriggerImpl] [main] [Azkaban] Loading all triggers from db.
+2021/03/05 15:55:03.984 +0800  INFO [JdbcTriggerImpl] [main] [Azkaban] Loaded 0 triggers.
+2021/03/05 15:55:03.989 +0800  INFO [WebMetricsImpl] [main] [Azkaban] No metrics set up for Web server.
+2021/03/05 15:55:03.995 +0800  INFO [ProjectManagerServlet] [main] [Azkaban] downloadBufferSize: 8192
+2021/03/05 15:55:04.393 +0800  INFO [AzkabanWebServer] [main] [Azkaban] Server started
+2021/03/05 15:55:04.393 +0800  INFO [AzkabanWebServer] [main] [Azkaban] Azkaban Web Server started...
+2021/03/05 15:55:04.990 +0800  INFO [ExecutionLogsCleaner] [azk-execlog-cleaner] [Azkaban] Cleaned up 0 log entries.
+2021/03/05 15:55:04.990 +0800  INFO [ExecutionLogsCleaner] [azk-execlog-cleaner] [Azkaban] log clean up time: 1010 ms.
+2021/03/05 15:55:10.876 +0800  INFO [LoginAbstractAzkabanServlet] [1157199772@qtp-837659261-0] [Azkaban] 0  -  "GET / - HTTP/1.1" browser
+2021/03/05 15:55:12.721 +0800  INFO [LoginAbstractAzkabanServlet] [1279403877@qtp-837659261-2] [Azkaban] 0  -  "POST / - HTTP/1.1" browser
+2021/03/05 15:55:12.736 +0800  INFO [LoginAbstractAzkabanServlet] [1279403877@qtp-837659261-2] [Azkaban] Session id created for user 'azkaban' and ip 0, 0 session(s) found from this IP
+2021/03/05 15:55:12.826 +0800  INFO [LoginAbstractAzkabanServlet] [1279403877@qtp-837659261-2] [Azkaban] 0 azkaban "GET / - HTTP/1.1" browser
+2021/03/05 15:55:12.832 +0800  INFO [LoginAbstractAzkabanServlet] [1279403877@qtp-837659261-2] [Azkaban] 0 azkaban "GET /index - HTTP/1.1" browser
+2021/03/05 15:55:14.442 +0800  INFO [LoginAbstractAzkabanServlet] [1279403877@qtp-837659261-2] [Azkaban] 0 azkaban "GET /manager project=test HTTP/1.1" browser
+2021/03/05 15:55:16.271 +0800  INFO [LoginAbstractAzkabanServlet] [1157199772@qtp-837659261-0] [Azkaban] 0 azkaban "GET /manager project=test&git-pull=true HTTP/1.1" browser
+2021/03/05 15:55:16.271 +0800  INFO [ProjectManagerServlet] [1157199772@qtp-837659261-0] [Azkaban] git pull begin...
+2021/03/05 16:34:25.521 +0800  INFO [AzkabanWebServer] [main] [Azkaban] Starting Azkaban Server
+2021/03/05 16:34:25.526 +0800  INFO [AzkabanWebServer] [main] [Azkaban] Using conf at D:\Az-View\local\conf
+2021/03/05 16:34:25.553 +0800  INFO [AzkabanServer] [main] [Azkaban] Loading azkaban settings file from local/conf
+2021/03/05 16:34:25.554 +0800  INFO [AzkabanServer] [main] [Azkaban] Loading azkaban properties file
+2021/03/05 16:34:25.557 +0800  INFO [AzkabanDatabaseUpdater] [main] [Azkaban] Use scripting directory azkaban-db/src/main/sql
+2021/03/05 16:34:25.557 +0800  INFO [AzkabanDatabaseUpdater] [main] [Azkaban] Will auto update any changes.
+2021/03/05 16:34:25.564 +0800  INFO [DataSourceUtils] [main] [Azkaban] h2 DB path: D:\Az-View\local\h2
+2021/03/05 16:34:25.608 +0800  INFO [AzkabanDatabaseSetup] [main] [Azkaban] Searching for installed tables
+2021/03/05 16:34:25.938 +0800  INFO [AzkabanDatabaseSetup] [main] [Azkaban] Searching for table versions in the properties table
+2021/03/05 16:34:25.961 +0800  INFO [AzkabanDatabaseUpdater] [main] [Azkaban] Everything looks up to date.
+2021/03/05 16:34:26.253 +0800  INFO [DispatchMethod] [main] [Azkaban] Value of dispatch method is : PUSH
+2021/03/05 16:34:26.559 +0800  WARN [ClusterLoader] [main] [Azkaban] cluster does not exist. No clusters are loaded.
+2021/03/05 16:34:26.645 +0800  INFO [WebServerProvider] [main] [Azkaban] Setting up connector with stats on: true
+2021/03/05 16:34:26.645 +0800  INFO [WebServerProvider] [main] [Azkaban] Starting server on port: 8081 # Max threads: 25
+2021/03/05 16:34:26.669 +0800  INFO [DispatchMethod] [main] [Azkaban] Value of dispatch method is : PUSH
+2021/03/05 16:34:26.676 +0800  WARN [StorageCleaner] [main] [Azkaban] Project cleanup disabled. All artifacts will be stored.
+2021/03/05 16:34:26.677 +0800  INFO [ValidatorUtils] [main] [Azkaban] Creating XmlValidatorManager instance (loading validators)...
+2021/03/05 16:34:26.678 +0800  WARN [XmlValidatorManager] [main] [Azkaban] Validator directory validators does not exist or is not a directory.
+2021/03/05 16:34:26.679 +0800  WARN [XmlValidatorManager] [main] [Azkaban] Azkaban properties file does not contain the key project.validators.xml.file
+2021/03/05 16:34:26.679 +0800  INFO [ValidatorUtils] [main] [Azkaban] XmlValidatorManager instance created.
+2021/03/05 16:34:26.680 +0800  INFO [AzkabanProjectLoader] [main] [Azkaban] Using temp dir: D:\Az-View\temp
+2021/03/05 16:34:26.680 +0800  INFO [AzkabanProjectLoader] [main] [Azkaban] Project version retention is set to 3
+2021/03/05 16:34:26.882 +0800  INFO [AzkabanCommonModule] [main] [Azkaban] Event reporter is not enabled
+2021/03/05 16:34:26.884 +0800  INFO [InMemoryProjectCache] [main] [Azkaban] Loading active projects.
+2021/03/05 16:34:26.884 +0800  INFO [InMemoryProjectCache] [main] [Azkaban] Loading flows from active projects.
+2021/03/05 16:34:26.892 +0800  INFO [InMemoryProjectCache] [main] [Azkaban] Time taken to initialize and load cache in milliseconds: 212
+2021/03/05 16:34:26.893 +0800  INFO [ProjectManager] [main] [Azkaban] Loading whitelisted projects.
+2021/03/05 16:34:26.893 +0800  INFO [ProjectManager] [main] [Azkaban] ProjectManager instance created.
+2021/03/05 16:34:26.967 +0800  INFO [TriggerManager] [main] [Azkaban] TriggerManager loaded.
+2021/03/05 16:34:26.967 +0800  WARN [SessionCache] [main] [Azkaban] azkaban.session.max_number_per_ip_per_user is not configured. The number of sessions per IP per user is not being capped.
+2021/03/05 16:34:26.970 +0800  INFO [AzkabanWebServerModule] [main] [Azkaban] Loading user manager class azkaban.user.XmlUserManager
+2021/03/05 16:34:26.987 +0800  INFO [XmlUserManager] [main] [Azkaban] Loading user azkaban
+2021/03/05 16:34:26.988 +0800  INFO [XmlUserManager] [main] [Azkaban] Loading user metrics
+2021/03/05 16:34:26.995 +0800  INFO [UserUtils] [main] [Azkaban] Starting configuration watching thread.
+2021/03/05 16:34:27.033 +0800  INFO [AzkabanWebServer] [main] [Azkaban] Loading built-in checker and action types
+2021/03/05 16:34:27.036 +0800  INFO [CheckerTypeLoader] [main] [Azkaban] Registering checker BasicTimeChecker
+2021/03/05 16:34:27.038 +0800  INFO [CheckerTypeLoader] [main] [Azkaban] Registering checker SlaChecker
+2021/03/05 16:34:27.038 +0800  INFO [CheckerTypeLoader] [main] [Azkaban] Registering checker ExecutionChecker
+2021/03/05 16:34:27.038 +0800  INFO [ActionTypeLoader] [main] [Azkaban] Registering action ExecuteFlowAction
+2021/03/05 16:34:27.038 +0800  INFO [ActionTypeLoader] [main] [Azkaban] Registering action KillExecutionAction
+2021/03/05 16:34:27.039 +0800  INFO [ActionTypeLoader] [main] [Azkaban] Registering action AlertAction
+2021/03/05 16:34:27.039 +0800  INFO [ActionTypeLoader] [main] [Azkaban] Registering action CreateTriggerAction
+2021/03/05 16:34:27.040 +0800  INFO [PluginCheckerAndActionsLoader] [main] [Azkaban] Loading plug-in checker and action types
+2021/03/05 16:34:27.041 +0800 ERROR [PluginCheckerAndActionsLoader] [main] [Azkaban] plugin path plugins/triggers doesn't exist!
+2021/03/05 16:34:27.057 +0800  INFO [AzkabanWebServer] [main] [Azkaban] Setting timezone to Asia/Shanghai
+2021/03/05 16:34:27.057 +0800  INFO [AzkabanWebServer] [main] [Azkaban] Registering MBeans...
+2021/03/05 16:34:27.063 +0800  INFO [MBeanRegistrationManager] [main] [Azkaban] Bean azkaban.jmx.JmxJettyServer registered.
+2021/03/05 16:34:27.065 +0800  INFO [MBeanRegistrationManager] [main] [Azkaban] Bean azkaban.jmx.JmxTriggerManager registered.
+2021/03/05 16:34:27.067 +0800  INFO [MBeanRegistrationManager] [main] [Azkaban] Bean azkaban.jmx.JmxExecutorManager registered.
+2021/03/05 16:34:27.075 +0800  INFO [MBeanRegistrationManager] [main] [Azkaban] Bean org.apache.log4j.jmx.HierarchyDynamicMBean registered.
+2021/03/05 16:34:27.075 +0800  INFO [AzkabanWebServer] [main] [Azkaban] ************* loginLoggerObjName is null, make sure there is a logger with name azkaban.webapp.servlet.LoginAbstractAzkabanServlet
+2021/03/05 16:34:27.163 +0800  INFO [FlowRunnerManager] [main] [Azkaban] useNewThreadPool: false
+2021/03/05 16:34:27.166 +0800  INFO [JobTypeManager] [main] [Azkaban] Loading plugin default job types
+2021/03/05 16:34:27.169 +0800  INFO [JobTypeManager] [main] [Azkaban] Job type plugin directory set. Loading extra job types from azkaban-solo-server\src\main\resources
+2021/03/05 16:34:27.169 +0800  INFO [JobTypeManager] [main] [Azkaban] Common plugin job props file azkaban-solo-server\src\main\resources\common.properties not found. Using only globals props
+2021/03/05 16:34:27.169 +0800  INFO [JobTypeManager] [main] [Azkaban] Common plugin load props file azkaban-solo-server\src\main\resources\commonprivate.properties found. Attempt to load.
+2021/03/05 16:34:27.169 +0800  INFO [JobTypeManager] [main] [Azkaban] Loading plugin conf
+2021/03/05 16:34:27.169 +0800  INFO [JobTypeManager] [main] [Azkaban] Plugin load props file azkaban-solo-server\src\main\resources\conf\private.properties not found.
+2021/03/05 16:34:27.169 +0800  INFO [FlowRunnerManager] [main] [Azkaban] Configuring Project Cache
+2021/03/05 16:34:27.170 +0800  INFO [FlowRunnerManager] [main] [Azkaban] Property azkaban.project_cache_size_percentage_of_disk not set. Project Cache directory will not be auto-cleaned as it gets full
+2021/03/05 16:34:27.171 +0800  INFO [DispatchMethod] [main] [Azkaban] Value of dispatch method is : PUSH
+2021/03/05 16:34:27.171 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/05 16:34:27.171 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/05 16:34:27.171 +0800  INFO [ExecJettyServerModule] [main] [Azkaban] Setting up connector with stats on: true
+2021/03/05 16:34:27.171 +0800  INFO [ExecJettyServerModule] [main] [Azkaban] Jetty connector name: 0.0.0.0:12321, default header buffer size: 4096
+2021/03/05 16:34:27.172 +0800  INFO [ExecJettyServerModule] [main] [Azkaban] Jetty connector name: 0.0.0.0:12321, (if) new header buffer size: 4096
+2021/03/05 16:34:27.209 +0800  INFO [JmxJobMBeanManager] [main] [Azkaban] Initializing azkaban.execapp.jmx.JmxJobMBeanManager
+2021/03/05 16:34:27.209 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Job callback enabled? true
+2021/03/05 16:34:27.213 +0800  INFO [JobCallbackManager] [main] [Azkaban] Initializing
+2021/03/05 16:34:27.215 +0800  INFO [JobCallbackRequestMaker] [main] [Azkaban] responseWaitTimeoutMS: 5000
+2021/03/05 16:34:27.216 +0800  INFO [JobCallbackRequestMaker] [main] [Azkaban] Global request configuration [expectContinueEnabled=false, proxy=null, localAddress=null, cookieSpec=null, redirectsEnabled=true, relativeRedirectsAllowed=true, maxRedirects=50, circularRedirectsAllowed=false, authenticationEnabled=true, targetPreferredAuthSchemes=null, proxyPreferredAuthSchemes=null, connectionRequestTimeout=3000, connectTimeout=3000, socketTimeout=3000, contentCompressionEnabled=true]
+2021/03/05 16:34:27.559 +0800  INFO [JobCallbackRequestMaker] [main] [Azkaban] Jobcall thread pool size: 10
+2021/03/05 16:34:27.561 +0800  INFO [JobCallbackRequestMaker] [main] [Azkaban] Initialization for azkaban.execapp.event.JobCallbackRequestMaker is completed
+2021/03/05 16:34:27.568 +0800  INFO [JobCallbackManager] [main] [Azkaban] Initialization completed azkaban.execapp.event.JobCallbackManager
+2021/03/05 16:34:27.568 +0800  INFO [JobCallbackManager] [main] [Azkaban] azkabanHostName DESKTOP-DECJGCG
+2021/03/05 16:34:27.568 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Registering MBeans...
+2021/03/05 16:34:27.568 +0800  INFO [MBeanRegistrationManager] [main] [Azkaban] Bean azkaban.jmx.JmxJettyServer registered.
+2021/03/05 16:34:27.572 +0800  INFO [MBeanRegistrationManager] [main] [Azkaban] Bean azkaban.execapp.jmx.JmxFlowRunnerManager registered.
+2021/03/05 16:34:27.574 +0800  INFO [MBeanRegistrationManager] [main] [Azkaban] Bean azkaban.execapp.jmx.JmxFlowRampManager registered.
+2021/03/05 16:34:27.576 +0800  INFO [MBeanRegistrationManager] [main] [Azkaban] Bean azkaban.execapp.jmx.JmxJobMBeanManager registered.
+2021/03/05 16:34:27.576 +0800  INFO [MBeanRegistrationManager] [main] [Azkaban] Bean azkaban.execapp.jmx.JmxJobCallback registered.
+2021/03/05 16:34:27.576 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Starting to configure Metric Reports
+2021/03/05 16:34:27.578 +0800  INFO [MetricReportManager] [main] [Azkaban] Instantiating MetricReportManager
+2021/03/05 16:34:27.578 +0800  INFO [MetricReportManager] [main] [Azkaban] Enabling Metric Manager
+2021/03/05 16:34:27.579 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Adding number of failed flow metric
+2021/03/05 16:34:27.582 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Adding number of failed jobs metric
+2021/03/05 16:34:27.583 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Adding number of running Jobs metric
+2021/03/05 16:34:27.584 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Adding number of running flows metric
+2021/03/05 16:34:27.585 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Adding number of queued flows metric
+2021/03/05 16:34:27.585 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Completed configuring Metric Reports
+2021/03/05 16:34:27.585 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] No value for property: jmx.attribute.processor.class was found
+2021/03/05 16:34:27.587 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] This executor is already in the DB. Found active=true
+2021/03/05 16:34:27.620 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] This executor is already in the DB. Found: DESKTOP-DECJGCG:12321 (id: 1), active=true
+2021/03/05 16:34:27.624 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Started Executor Server on DESKTOP-DECJGCG:12321
+2021/03/05 16:34:27.624 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Setting timezone to Asia/Shanghai
+2021/03/05 16:34:27.625 +0800  INFO [AzkabanWebServer] [main] [Azkaban] Azkaban Exec Server started...
+2021/03/05 16:34:27.625 +0800  INFO [FlowRunnerManager] [main] [Azkaban] Set active action ignored. Executor is already active
+2021/03/05 16:34:27.625 +0800  INFO [AzkabanWebServer] [main] [Azkaban] Azkaban Exec Server activated...
+2021/03/05 16:34:27.625 +0800  INFO [DataSourceUtils] [main] [Azkaban] h2 DB path: D:\Az-View\local\h2
+2021/03/05 16:34:27.625 +0800  INFO [AzkabanDatabaseSetup] [main] [Azkaban] Searching for installed tables
+2021/03/05 16:34:27.627 +0800  INFO [AzkabanDatabaseSetup] [main] [Azkaban] Searching for table versions in the properties table
+2021/03/05 16:34:27.643 +0800  INFO [ExecutorManager] [main] [Azkaban] Initializing executors from database.
+2021/03/05 16:34:27.643 +0800  INFO [ExecutorManager] [main] [Azkaban] Loading running flows from database..
+2021/03/05 16:34:27.661 +0800  INFO [ExecutorManager] [main] [Azkaban] Loaded 0 running flows
+2021/03/05 16:34:27.667 +0800  INFO [ExecutorManager] [main] [Azkaban] QueueProcessorThread active turned true
+2021/03/05 16:34:27.667 +0800  INFO [ExecutionLogsCleaner] [main] [Azkaban] Starting execution logs clean up thread
+2021/03/05 16:34:27.668 +0800  INFO [AzkabanWebServer] [main] [Azkaban] Setting up web resource dir azkaban-web-server/build/install/azkaban-web-server/web
+2021/03/05 16:34:27.669 +0800  INFO [ExecutionLogsCleaner] [azk-execlog-cleaner] [Azkaban] Cleaning old logs from execution_logs
+2021/03/05 16:34:27.717 +0800  INFO [ExecutionLogsCleaner] [azk-execlog-cleaner] [Azkaban] Cleaning old log files before 2020-12-11T16:34:27.669+08:00
+2021/03/05 16:34:27.718 +0800  INFO [JdbcTriggerImpl] [main] [Azkaban] Loading all triggers from db.
+2021/03/05 16:34:27.719 +0800  INFO [JdbcTriggerImpl] [main] [Azkaban] Loaded 0 triggers.
+2021/03/05 16:34:27.727 +0800  INFO [WebMetricsImpl] [main] [Azkaban] No metrics set up for Web server.
+2021/03/05 16:34:27.734 +0800  INFO [ProjectManagerServlet] [main] [Azkaban] downloadBufferSize: 8192
+2021/03/05 16:34:28.133 +0800  INFO [AzkabanWebServer] [main] [Azkaban] Server started
+2021/03/05 16:34:28.134 +0800  INFO [AzkabanWebServer] [main] [Azkaban] Azkaban Web Server started...
+2021/03/05 16:34:28.733 +0800  INFO [ExecutionLogsCleaner] [azk-execlog-cleaner] [Azkaban] Cleaned up 0 log entries.
+2021/03/05 16:34:28.733 +0800  INFO [ExecutionLogsCleaner] [azk-execlog-cleaner] [Azkaban] log clean up time: 1016 ms.
+2021/03/05 16:34:36.627 +0800  INFO [LoginAbstractAzkabanServlet] [1157199772@qtp-837659261-0] [Azkaban] 0  -  "GET /manager project=test HTTP/1.1" browser
+2021/03/05 16:34:38.152 +0800  INFO [LoginAbstractAzkabanServlet] [135532929@qtp-837659261-2] [Azkaban] 0  -  "POST /manager project=test HTTP/1.1" browser
+2021/03/05 16:34:38.167 +0800  INFO [LoginAbstractAzkabanServlet] [135532929@qtp-837659261-2] [Azkaban] Session id created for user 'azkaban' and ip 0, 0 session(s) found from this IP
+2021/03/05 16:34:38.255 +0800  INFO [LoginAbstractAzkabanServlet] [135532929@qtp-837659261-2] [Azkaban] 0 azkaban "GET /manager project=test HTTP/1.1" browser
+2021/03/05 16:36:22.012 +0800  INFO [AzkabanWebServer] [main] [Azkaban] Starting Azkaban Server
+2021/03/05 16:36:22.019 +0800  INFO [AzkabanWebServer] [main] [Azkaban] Using conf at D:\Az-View\local\conf
+2021/03/05 16:36:22.052 +0800  INFO [AzkabanServer] [main] [Azkaban] Loading azkaban settings file from local/conf
+2021/03/05 16:36:22.052 +0800  INFO [AzkabanServer] [main] [Azkaban] Loading azkaban properties file
+2021/03/05 16:36:22.055 +0800  INFO [AzkabanDatabaseUpdater] [main] [Azkaban] Use scripting directory azkaban-db/src/main/sql
+2021/03/05 16:36:22.055 +0800  INFO [AzkabanDatabaseUpdater] [main] [Azkaban] Will auto update any changes.
+2021/03/05 16:36:22.063 +0800  INFO [DataSourceUtils] [main] [Azkaban] h2 DB path: D:\Az-View\local\h2
+2021/03/05 16:36:22.103 +0800  INFO [AzkabanDatabaseSetup] [main] [Azkaban] Searching for installed tables
+2021/03/05 16:36:22.439 +0800  INFO [AzkabanDatabaseSetup] [main] [Azkaban] Searching for table versions in the properties table
+2021/03/05 16:36:22.460 +0800  INFO [AzkabanDatabaseUpdater] [main] [Azkaban] Everything looks up to date.
+2021/03/05 16:36:23.175 +0800  INFO [DispatchMethod] [main] [Azkaban] Value of dispatch method is : PUSH
+2021/03/05 16:36:24.034 +0800  WARN [ClusterLoader] [main] [Azkaban] cluster does not exist. No clusters are loaded.
+2021/03/05 16:36:24.179 +0800  INFO [WebServerProvider] [main] [Azkaban] Setting up connector with stats on: true
+2021/03/05 16:36:24.179 +0800  INFO [WebServerProvider] [main] [Azkaban] Starting server on port: 8081 # Max threads: 25
+2021/03/05 16:36:24.209 +0800  INFO [DispatchMethod] [main] [Azkaban] Value of dispatch method is : PUSH
+2021/03/05 16:36:24.226 +0800  WARN [StorageCleaner] [main] [Azkaban] Project cleanup disabled. All artifacts will be stored.
+2021/03/05 16:36:24.226 +0800  INFO [ValidatorUtils] [main] [Azkaban] Creating XmlValidatorManager instance (loading validators)...
+2021/03/05 16:36:24.228 +0800  WARN [XmlValidatorManager] [main] [Azkaban] Validator directory validators does not exist or is not a directory.
+2021/03/05 16:36:24.230 +0800  WARN [XmlValidatorManager] [main] [Azkaban] Azkaban properties file does not contain the key project.validators.xml.file
+2021/03/05 16:36:24.230 +0800  INFO [ValidatorUtils] [main] [Azkaban] XmlValidatorManager instance created.
+2021/03/05 16:36:24.231 +0800  INFO [AzkabanProjectLoader] [main] [Azkaban] Using temp dir: D:\Az-View\temp
+2021/03/05 16:36:24.235 +0800  INFO [AzkabanProjectLoader] [main] [Azkaban] Project version retention is set to 3
+2021/03/05 16:36:24.424 +0800  INFO [AzkabanCommonModule] [main] [Azkaban] Event reporter is not enabled
+2021/03/05 16:36:24.426 +0800  INFO [InMemoryProjectCache] [main] [Azkaban] Loading active projects.
+2021/03/05 16:36:24.426 +0800  INFO [InMemoryProjectCache] [main] [Azkaban] Loading flows from active projects.
+2021/03/05 16:36:24.438 +0800  INFO [InMemoryProjectCache] [main] [Azkaban] Time taken to initialize and load cache in milliseconds: 202
+2021/03/05 16:36:24.439 +0800  INFO [ProjectManager] [main] [Azkaban] Loading whitelisted projects.
+2021/03/05 16:36:24.439 +0800  INFO [ProjectManager] [main] [Azkaban] ProjectManager instance created.
+2021/03/05 16:36:24.531 +0800  INFO [TriggerManager] [main] [Azkaban] TriggerManager loaded.
+2021/03/05 16:36:24.534 +0800  WARN [SessionCache] [main] [Azkaban] azkaban.session.max_number_per_ip_per_user is not configured. The number of sessions per IP per user is not being capped.
+2021/03/05 16:36:24.537 +0800  INFO [AzkabanWebServerModule] [main] [Azkaban] Loading user manager class azkaban.user.XmlUserManager
+2021/03/05 16:36:24.567 +0800  INFO [XmlUserManager] [main] [Azkaban] Loading user azkaban
+2021/03/05 16:36:24.567 +0800  INFO [XmlUserManager] [main] [Azkaban] Loading user metrics
+2021/03/05 16:36:24.577 +0800  INFO [UserUtils] [main] [Azkaban] Starting configuration watching thread.
+2021/03/05 16:36:24.630 +0800  INFO [AzkabanWebServer] [main] [Azkaban] Loading built-in checker and action types
+2021/03/05 16:36:24.634 +0800  INFO [CheckerTypeLoader] [main] [Azkaban] Registering checker BasicTimeChecker
+2021/03/05 16:36:24.637 +0800  INFO [CheckerTypeLoader] [main] [Azkaban] Registering checker SlaChecker
+2021/03/05 16:36:24.637 +0800  INFO [CheckerTypeLoader] [main] [Azkaban] Registering checker ExecutionChecker
+2021/03/05 16:36:24.638 +0800  INFO [ActionTypeLoader] [main] [Azkaban] Registering action ExecuteFlowAction
+2021/03/05 16:36:24.638 +0800  INFO [ActionTypeLoader] [main] [Azkaban] Registering action KillExecutionAction
+2021/03/05 16:36:24.640 +0800  INFO [ActionTypeLoader] [main] [Azkaban] Registering action AlertAction
+2021/03/05 16:36:24.640 +0800  INFO [ActionTypeLoader] [main] [Azkaban] Registering action CreateTriggerAction
+2021/03/05 16:36:24.641 +0800  INFO [PluginCheckerAndActionsLoader] [main] [Azkaban] Loading plug-in checker and action types
+2021/03/05 16:36:24.642 +0800 ERROR [PluginCheckerAndActionsLoader] [main] [Azkaban] plugin path plugins/triggers doesn't exist!
+2021/03/05 16:36:24.665 +0800  INFO [AzkabanWebServer] [main] [Azkaban] Setting timezone to Asia/Shanghai
+2021/03/05 16:36:24.665 +0800  INFO [AzkabanWebServer] [main] [Azkaban] Registering MBeans...
+2021/03/05 16:36:24.677 +0800  INFO [MBeanRegistrationManager] [main] [Azkaban] Bean azkaban.jmx.JmxJettyServer registered.
+2021/03/05 16:36:24.679 +0800  INFO [MBeanRegistrationManager] [main] [Azkaban] Bean azkaban.jmx.JmxTriggerManager registered.
+2021/03/05 16:36:24.687 +0800  INFO [MBeanRegistrationManager] [main] [Azkaban] Bean azkaban.jmx.JmxExecutorManager registered.
+2021/03/05 16:36:24.703 +0800  INFO [MBeanRegistrationManager] [main] [Azkaban] Bean org.apache.log4j.jmx.HierarchyDynamicMBean registered.
+2021/03/05 16:36:24.703 +0800  INFO [AzkabanWebServer] [main] [Azkaban] ************* loginLoggerObjName is null, make sure there is a logger with name azkaban.webapp.servlet.LoginAbstractAzkabanServlet
+2021/03/05 16:36:24.812 +0800  INFO [FlowRunnerManager] [main] [Azkaban] useNewThreadPool: false
+2021/03/05 16:36:24.816 +0800  INFO [JobTypeManager] [main] [Azkaban] Loading plugin default job types
+2021/03/05 16:36:24.819 +0800  INFO [JobTypeManager] [main] [Azkaban] Job type plugin directory set. Loading extra job types from azkaban-solo-server\src\main\resources
+2021/03/05 16:36:24.819 +0800  INFO [JobTypeManager] [main] [Azkaban] Common plugin job props file azkaban-solo-server\src\main\resources\common.properties not found. Using only globals props
+2021/03/05 16:36:24.820 +0800  INFO [JobTypeManager] [main] [Azkaban] Common plugin load props file azkaban-solo-server\src\main\resources\commonprivate.properties found. Attempt to load.
+2021/03/05 16:36:24.820 +0800  INFO [JobTypeManager] [main] [Azkaban] Loading plugin conf
+2021/03/05 16:36:24.820 +0800  INFO [JobTypeManager] [main] [Azkaban] Plugin load props file azkaban-solo-server\src\main\resources\conf\private.properties not found.
+2021/03/05 16:36:24.820 +0800  INFO [FlowRunnerManager] [main] [Azkaban] Configuring Project Cache
+2021/03/05 16:36:24.820 +0800  INFO [FlowRunnerManager] [main] [Azkaban] Property azkaban.project_cache_size_percentage_of_disk not set. Project Cache directory will not be auto-cleaned as it gets full
+2021/03/05 16:36:24.821 +0800  INFO [DispatchMethod] [main] [Azkaban] Value of dispatch method is : PUSH
+2021/03/05 16:36:24.822 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/05 16:36:24.822 +0800  INFO [ExecJettyServerModule] [main] [Azkaban] Setting up connector with stats on: true
+2021/03/05 16:36:24.822 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/05 16:36:24.822 +0800  INFO [ExecJettyServerModule] [main] [Azkaban] Jetty connector name: 0.0.0.0:12321, default header buffer size: 4096
+2021/03/05 16:36:24.822 +0800  INFO [ExecJettyServerModule] [main] [Azkaban] Jetty connector name: 0.0.0.0:12321, (if) new header buffer size: 4096
+2021/03/05 16:36:24.880 +0800  INFO [JmxJobMBeanManager] [main] [Azkaban] Initializing azkaban.execapp.jmx.JmxJobMBeanManager
+2021/03/05 16:36:24.880 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Job callback enabled? true
+2021/03/05 16:36:24.883 +0800  INFO [JobCallbackManager] [main] [Azkaban] Initializing
+2021/03/05 16:36:24.884 +0800  INFO [JobCallbackRequestMaker] [main] [Azkaban] responseWaitTimeoutMS: 5000
+2021/03/05 16:36:24.888 +0800  INFO [JobCallbackRequestMaker] [main] [Azkaban] Global request configuration [expectContinueEnabled=false, proxy=null, localAddress=null, cookieSpec=null, redirectsEnabled=true, relativeRedirectsAllowed=true, maxRedirects=50, circularRedirectsAllowed=false, authenticationEnabled=true, targetPreferredAuthSchemes=null, proxyPreferredAuthSchemes=null, connectionRequestTimeout=3000, connectTimeout=3000, socketTimeout=3000, contentCompressionEnabled=true]
+2021/03/05 16:36:25.365 +0800  INFO [JobCallbackRequestMaker] [main] [Azkaban] Jobcall thread pool size: 10
+2021/03/05 16:36:25.368 +0800  INFO [JobCallbackRequestMaker] [main] [Azkaban] Initialization for azkaban.execapp.event.JobCallbackRequestMaker is completed
+2021/03/05 16:36:25.373 +0800  INFO [JobCallbackManager] [main] [Azkaban] Initialization completed azkaban.execapp.event.JobCallbackManager
+2021/03/05 16:36:25.373 +0800  INFO [JobCallbackManager] [main] [Azkaban] azkabanHostName DESKTOP-DECJGCG
+2021/03/05 16:36:25.373 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Registering MBeans...
+2021/03/05 16:36:25.374 +0800  INFO [MBeanRegistrationManager] [main] [Azkaban] Bean azkaban.jmx.JmxJettyServer registered.
+2021/03/05 16:36:25.376 +0800  INFO [MBeanRegistrationManager] [main] [Azkaban] Bean azkaban.execapp.jmx.JmxFlowRunnerManager registered.
+2021/03/05 16:36:25.379 +0800  INFO [MBeanRegistrationManager] [main] [Azkaban] Bean azkaban.execapp.jmx.JmxFlowRampManager registered.
+2021/03/05 16:36:25.380 +0800  INFO [MBeanRegistrationManager] [main] [Azkaban] Bean azkaban.execapp.jmx.JmxJobMBeanManager registered.
+2021/03/05 16:36:25.380 +0800  INFO [MBeanRegistrationManager] [main] [Azkaban] Bean azkaban.execapp.jmx.JmxJobCallback registered.
+2021/03/05 16:36:25.380 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Starting to configure Metric Reports
+2021/03/05 16:36:25.383 +0800  INFO [MetricReportManager] [main] [Azkaban] Instantiating MetricReportManager
+2021/03/05 16:36:25.383 +0800  INFO [MetricReportManager] [main] [Azkaban] Enabling Metric Manager
+2021/03/05 16:36:25.384 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Adding number of failed flow metric
+2021/03/05 16:36:25.387 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Adding number of failed jobs metric
+2021/03/05 16:36:25.388 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Adding number of running Jobs metric
+2021/03/05 16:36:25.388 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Adding number of running flows metric
+2021/03/05 16:36:25.389 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Adding number of queued flows metric
+2021/03/05 16:36:25.389 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Completed configuring Metric Reports
+2021/03/05 16:36:25.389 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] No value for property: jmx.attribute.processor.class was found
+2021/03/05 16:36:25.391 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] This executor is already in the DB. Found active=true
+2021/03/05 16:36:25.423 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] This executor is already in the DB. Found: DESKTOP-DECJGCG:12321 (id: 1), active=true
+2021/03/05 16:36:25.427 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Started Executor Server on DESKTOP-DECJGCG:12321
+2021/03/05 16:36:25.427 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Setting timezone to Asia/Shanghai
+2021/03/05 16:36:25.428 +0800  INFO [AzkabanWebServer] [main] [Azkaban] Azkaban Exec Server started...
+2021/03/05 16:36:25.428 +0800  INFO [FlowRunnerManager] [main] [Azkaban] Set active action ignored. Executor is already active
+2021/03/05 16:36:25.428 +0800  INFO [AzkabanWebServer] [main] [Azkaban] Azkaban Exec Server activated...
+2021/03/05 16:36:25.429 +0800  INFO [DataSourceUtils] [main] [Azkaban] h2 DB path: D:\Az-View\local\h2
+2021/03/05 16:36:25.429 +0800  INFO [AzkabanDatabaseSetup] [main] [Azkaban] Searching for installed tables
+2021/03/05 16:36:25.433 +0800  INFO [AzkabanDatabaseSetup] [main] [Azkaban] Searching for table versions in the properties table
+2021/03/05 16:36:25.452 +0800  INFO [ExecutorManager] [main] [Azkaban] Initializing executors from database.
+2021/03/05 16:36:25.453 +0800  INFO [ExecutorManager] [main] [Azkaban] Loading running flows from database..
+2021/03/05 16:36:25.475 +0800  INFO [ExecutorManager] [main] [Azkaban] Loaded 0 running flows
+2021/03/05 16:36:25.481 +0800  INFO [ExecutorManager] [main] [Azkaban] QueueProcessorThread active turned true
+2021/03/05 16:36:25.482 +0800  INFO [ExecutionLogsCleaner] [main] [Azkaban] Starting execution logs clean up thread
+2021/03/05 16:36:25.484 +0800  INFO [AzkabanWebServer] [main] [Azkaban] Setting up web resource dir azkaban-web-server/build/install/azkaban-web-server/web
+2021/03/05 16:36:25.484 +0800  INFO [ExecutionLogsCleaner] [azk-execlog-cleaner] [Azkaban] Cleaning old logs from execution_logs
+2021/03/05 16:36:25.541 +0800  INFO [JdbcTriggerImpl] [main] [Azkaban] Loading all triggers from db.
+2021/03/05 16:36:25.542 +0800  INFO [JdbcTriggerImpl] [main] [Azkaban] Loaded 0 triggers.
+2021/03/05 16:36:25.542 +0800  INFO [ExecutionLogsCleaner] [azk-execlog-cleaner] [Azkaban] Cleaning old log files before 2020-12-11T16:36:25.484+08:00
+2021/03/05 16:36:25.550 +0800  INFO [WebMetricsImpl] [main] [Azkaban] No metrics set up for Web server.
+2021/03/05 16:36:25.558 +0800  INFO [ProjectManagerServlet] [main] [Azkaban] downloadBufferSize: 8192
+2021/03/05 16:36:25.926 +0800  INFO [AzkabanWebServer] [main] [Azkaban] Server started
+2021/03/05 16:36:25.926 +0800  INFO [AzkabanWebServer] [main] [Azkaban] Azkaban Web Server started...
+2021/03/05 16:36:26.551 +0800  INFO [ExecutionLogsCleaner] [azk-execlog-cleaner] [Azkaban] Cleaned up 0 log entries.
+2021/03/05 16:36:26.551 +0800  INFO [ExecutionLogsCleaner] [azk-execlog-cleaner] [Azkaban] log clean up time: 1008 ms.
+2021/03/05 16:36:48.190 +0800  INFO [LoginAbstractAzkabanServlet] [1157199772@qtp-837659261-0] [Azkaban] 0  -  "GET /manager project=test HTTP/1.1" browser
+2021/03/05 16:36:49.553 +0800  INFO [LoginAbstractAzkabanServlet] [2085100953@qtp-837659261-5] [Azkaban] 0  -  "POST /manager project=test HTTP/1.1" browser
+2021/03/05 16:36:49.570 +0800  INFO [LoginAbstractAzkabanServlet] [2085100953@qtp-837659261-5] [Azkaban] Session id created for user 'azkaban' and ip 0, 0 session(s) found from this IP
+2021/03/05 16:36:49.643 +0800  INFO [LoginAbstractAzkabanServlet] [2085100953@qtp-837659261-5] [Azkaban] 0 azkaban "GET /manager project=test HTTP/1.1" browser
+2021/03/05 16:37:24.831 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/05 16:37:25.390 +0800  INFO [InMemoryMetricEmitter] [azk-metric-pool-0] [Azkaban] First time capturing metric: NumFailedFlowMetric
+2021/03/05 16:37:25.404 +0800  INFO [InMemoryMetricEmitter] [azk-metric-pool-0] [Azkaban] First time capturing metric: NumQueuedFlowMetric
+2021/03/05 16:37:25.404 +0800  INFO [InMemoryMetricEmitter] [azk-metric-pool-1] [Azkaban] First time capturing metric: NumRunningJobMetric
+2021/03/05 16:37:25.404 +0800  INFO [InMemoryMetricEmitter] [azk-metric-pool-3] [Azkaban] First time capturing metric: NumRunningFlowMetric
+2021/03/05 16:37:25.404 +0800  INFO [InMemoryMetricEmitter] [azk-metric-pool-2] [Azkaban] First time capturing metric: NumFailedJobMetric
+2021/03/05 16:38:24.834 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/05 16:38:24.834 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/05 16:39:24.841 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/05 16:40:24.853 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/05 16:40:24.853 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/05 16:42:26.060 +0800  INFO [AzkabanWebServer] [main] [Azkaban] Starting Azkaban Server
+2021/03/05 16:42:26.069 +0800  INFO [AzkabanWebServer] [main] [Azkaban] Using conf at D:\Az-View\local\conf
+2021/03/05 16:42:26.104 +0800  INFO [AzkabanServer] [main] [Azkaban] Loading azkaban settings file from local/conf
+2021/03/05 16:42:26.105 +0800  INFO [AzkabanServer] [main] [Azkaban] Loading azkaban properties file
+2021/03/05 16:42:26.108 +0800  INFO [AzkabanDatabaseUpdater] [main] [Azkaban] Use scripting directory azkaban-db/src/main/sql
+2021/03/05 16:42:26.108 +0800  INFO [AzkabanDatabaseUpdater] [main] [Azkaban] Will auto update any changes.
+2021/03/05 16:42:26.115 +0800  INFO [DataSourceUtils] [main] [Azkaban] h2 DB path: D:\Az-View\local\h2
+2021/03/05 16:42:26.155 +0800  INFO [AzkabanDatabaseSetup] [main] [Azkaban] Searching for installed tables
+2021/03/05 16:42:26.465 +0800  INFO [AzkabanDatabaseSetup] [main] [Azkaban] Searching for table versions in the properties table
+2021/03/05 16:42:26.485 +0800  INFO [AzkabanDatabaseUpdater] [main] [Azkaban] Everything looks up to date.
+2021/03/05 16:42:26.770 +0800  INFO [DispatchMethod] [main] [Azkaban] Value of dispatch method is : PUSH
+2021/03/05 16:42:27.046 +0800  WARN [ClusterLoader] [main] [Azkaban] cluster does not exist. No clusters are loaded.
+2021/03/05 16:42:27.126 +0800  INFO [WebServerProvider] [main] [Azkaban] Setting up connector with stats on: true
+2021/03/05 16:42:27.126 +0800  INFO [WebServerProvider] [main] [Azkaban] Starting server on port: 8081 # Max threads: 25
+2021/03/05 16:42:27.144 +0800  INFO [DispatchMethod] [main] [Azkaban] Value of dispatch method is : PUSH
+2021/03/05 16:42:27.154 +0800  WARN [StorageCleaner] [main] [Azkaban] Project cleanup disabled. All artifacts will be stored.
+2021/03/05 16:42:27.154 +0800  INFO [ValidatorUtils] [main] [Azkaban] Creating XmlValidatorManager instance (loading validators)...
+2021/03/05 16:42:27.156 +0800  WARN [XmlValidatorManager] [main] [Azkaban] Validator directory validators does not exist or is not a directory.
+2021/03/05 16:42:27.157 +0800  WARN [XmlValidatorManager] [main] [Azkaban] Azkaban properties file does not contain the key project.validators.xml.file
+2021/03/05 16:42:27.157 +0800  INFO [ValidatorUtils] [main] [Azkaban] XmlValidatorManager instance created.
+2021/03/05 16:42:27.157 +0800  INFO [AzkabanProjectLoader] [main] [Azkaban] Using temp dir: D:\Az-View\temp
+2021/03/05 16:42:27.157 +0800  INFO [AzkabanProjectLoader] [main] [Azkaban] Project version retention is set to 3
+2021/03/05 16:42:27.334 +0800  INFO [AzkabanCommonModule] [main] [Azkaban] Event reporter is not enabled
+2021/03/05 16:42:27.336 +0800  INFO [InMemoryProjectCache] [main] [Azkaban] Loading active projects.
+2021/03/05 16:42:27.336 +0800  INFO [InMemoryProjectCache] [main] [Azkaban] Loading flows from active projects.
+2021/03/05 16:42:27.344 +0800  INFO [InMemoryProjectCache] [main] [Azkaban] Time taken to initialize and load cache in milliseconds: 187
+2021/03/05 16:42:27.345 +0800  INFO [ProjectManager] [main] [Azkaban] Loading whitelisted projects.
+2021/03/05 16:42:27.345 +0800  INFO [ProjectManager] [main] [Azkaban] ProjectManager instance created.
+2021/03/05 16:42:27.417 +0800  INFO [TriggerManager] [main] [Azkaban] TriggerManager loaded.
+2021/03/05 16:42:27.419 +0800  WARN [SessionCache] [main] [Azkaban] azkaban.session.max_number_per_ip_per_user is not configured. The number of sessions per IP per user is not being capped.
+2021/03/05 16:42:27.421 +0800  INFO [AzkabanWebServerModule] [main] [Azkaban] Loading user manager class azkaban.user.XmlUserManager
+2021/03/05 16:42:27.442 +0800  INFO [XmlUserManager] [main] [Azkaban] Loading user azkaban
+2021/03/05 16:42:27.444 +0800  INFO [XmlUserManager] [main] [Azkaban] Loading user metrics
+2021/03/05 16:42:27.451 +0800  INFO [UserUtils] [main] [Azkaban] Starting configuration watching thread.
+2021/03/05 16:42:27.492 +0800  INFO [AzkabanWebServer] [main] [Azkaban] Loading built-in checker and action types
+2021/03/05 16:42:27.494 +0800  INFO [CheckerTypeLoader] [main] [Azkaban] Registering checker BasicTimeChecker
+2021/03/05 16:42:27.495 +0800  INFO [CheckerTypeLoader] [main] [Azkaban] Registering checker SlaChecker
+2021/03/05 16:42:27.495 +0800  INFO [CheckerTypeLoader] [main] [Azkaban] Registering checker ExecutionChecker
+2021/03/05 16:42:27.495 +0800  INFO [ActionTypeLoader] [main] [Azkaban] Registering action ExecuteFlowAction
+2021/03/05 16:42:27.495 +0800  INFO [ActionTypeLoader] [main] [Azkaban] Registering action KillExecutionAction
+2021/03/05 16:42:27.495 +0800  INFO [ActionTypeLoader] [main] [Azkaban] Registering action AlertAction
+2021/03/05 16:42:27.495 +0800  INFO [ActionTypeLoader] [main] [Azkaban] Registering action CreateTriggerAction
+2021/03/05 16:42:27.496 +0800  INFO [PluginCheckerAndActionsLoader] [main] [Azkaban] Loading plug-in checker and action types
+2021/03/05 16:42:27.496 +0800 ERROR [PluginCheckerAndActionsLoader] [main] [Azkaban] plugin path plugins/triggers doesn't exist!
+2021/03/05 16:42:27.517 +0800  INFO [AzkabanWebServer] [main] [Azkaban] Setting timezone to Asia/Shanghai
+2021/03/05 16:42:27.517 +0800  INFO [AzkabanWebServer] [main] [Azkaban] Registering MBeans...
+2021/03/05 16:42:27.526 +0800  INFO [MBeanRegistrationManager] [main] [Azkaban] Bean azkaban.jmx.JmxJettyServer registered.
+2021/03/05 16:42:27.528 +0800  INFO [MBeanRegistrationManager] [main] [Azkaban] Bean azkaban.jmx.JmxTriggerManager registered.
+2021/03/05 16:42:27.530 +0800  INFO [MBeanRegistrationManager] [main] [Azkaban] Bean azkaban.jmx.JmxExecutorManager registered.
+2021/03/05 16:42:27.541 +0800  INFO [MBeanRegistrationManager] [main] [Azkaban] Bean org.apache.log4j.jmx.HierarchyDynamicMBean registered.
+2021/03/05 16:42:27.541 +0800  INFO [AzkabanWebServer] [main] [Azkaban] ************* loginLoggerObjName is null, make sure there is a logger with name azkaban.webapp.servlet.LoginAbstractAzkabanServlet
+2021/03/05 16:42:27.628 +0800  INFO [FlowRunnerManager] [main] [Azkaban] useNewThreadPool: false
+2021/03/05 16:42:27.636 +0800  INFO [JobTypeManager] [main] [Azkaban] Loading plugin default job types
+2021/03/05 16:42:27.639 +0800  INFO [JobTypeManager] [main] [Azkaban] Job type plugin directory set. Loading extra job types from azkaban-solo-server\src\main\resources
+2021/03/05 16:42:27.640 +0800  INFO [JobTypeManager] [main] [Azkaban] Common plugin job props file azkaban-solo-server\src\main\resources\common.properties not found. Using only globals props
+2021/03/05 16:42:27.640 +0800  INFO [JobTypeManager] [main] [Azkaban] Common plugin load props file azkaban-solo-server\src\main\resources\commonprivate.properties found. Attempt to load.
+2021/03/05 16:42:27.640 +0800  INFO [JobTypeManager] [main] [Azkaban] Loading plugin conf
+2021/03/05 16:42:27.640 +0800  INFO [JobTypeManager] [main] [Azkaban] Plugin load props file azkaban-solo-server\src\main\resources\conf\private.properties not found.
+2021/03/05 16:42:27.640 +0800  INFO [FlowRunnerManager] [main] [Azkaban] Configuring Project Cache
+2021/03/05 16:42:27.641 +0800  INFO [FlowRunnerManager] [main] [Azkaban] Property azkaban.project_cache_size_percentage_of_disk not set. Project Cache directory will not be auto-cleaned as it gets full
+2021/03/05 16:42:27.642 +0800  INFO [DispatchMethod] [main] [Azkaban] Value of dispatch method is : PUSH
+2021/03/05 16:42:27.642 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/05 16:42:27.642 +0800  INFO [ExecJettyServerModule] [main] [Azkaban] Setting up connector with stats on: true
+2021/03/05 16:42:27.642 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/05 16:42:27.642 +0800  INFO [ExecJettyServerModule] [main] [Azkaban] Jetty connector name: 0.0.0.0:12321, default header buffer size: 4096
+2021/03/05 16:42:27.643 +0800  INFO [ExecJettyServerModule] [main] [Azkaban] Jetty connector name: 0.0.0.0:12321, (if) new header buffer size: 4096
+2021/03/05 16:42:27.679 +0800  INFO [JmxJobMBeanManager] [main] [Azkaban] Initializing azkaban.execapp.jmx.JmxJobMBeanManager
+2021/03/05 16:42:27.679 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Job callback enabled? true
+2021/03/05 16:42:27.681 +0800  INFO [JobCallbackManager] [main] [Azkaban] Initializing
+2021/03/05 16:42:27.683 +0800  INFO [JobCallbackRequestMaker] [main] [Azkaban] responseWaitTimeoutMS: 5000
+2021/03/05 16:42:27.684 +0800  INFO [JobCallbackRequestMaker] [main] [Azkaban] Global request configuration [expectContinueEnabled=false, proxy=null, localAddress=null, cookieSpec=null, redirectsEnabled=true, relativeRedirectsAllowed=true, maxRedirects=50, circularRedirectsAllowed=false, authenticationEnabled=true, targetPreferredAuthSchemes=null, proxyPreferredAuthSchemes=null, connectionRequestTimeout=3000, connectTimeout=3000, socketTimeout=3000, contentCompressionEnabled=true]
+2021/03/05 16:42:28.021 +0800  INFO [JobCallbackRequestMaker] [main] [Azkaban] Jobcall thread pool size: 10
+2021/03/05 16:42:28.022 +0800  INFO [JobCallbackRequestMaker] [main] [Azkaban] Initialization for azkaban.execapp.event.JobCallbackRequestMaker is completed
+2021/03/05 16:42:28.029 +0800  INFO [JobCallbackManager] [main] [Azkaban] Initialization completed azkaban.execapp.event.JobCallbackManager
+2021/03/05 16:42:28.029 +0800  INFO [JobCallbackManager] [main] [Azkaban] azkabanHostName DESKTOP-DECJGCG
+2021/03/05 16:42:28.029 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Registering MBeans...
+2021/03/05 16:42:28.029 +0800  INFO [MBeanRegistrationManager] [main] [Azkaban] Bean azkaban.jmx.JmxJettyServer registered.
+2021/03/05 16:42:28.031 +0800  INFO [MBeanRegistrationManager] [main] [Azkaban] Bean azkaban.execapp.jmx.JmxFlowRunnerManager registered.
+2021/03/05 16:42:28.032 +0800  INFO [MBeanRegistrationManager] [main] [Azkaban] Bean azkaban.execapp.jmx.JmxFlowRampManager registered.
+2021/03/05 16:42:28.032 +0800  INFO [MBeanRegistrationManager] [main] [Azkaban] Bean azkaban.execapp.jmx.JmxJobMBeanManager registered.
+2021/03/05 16:42:28.033 +0800  INFO [MBeanRegistrationManager] [main] [Azkaban] Bean azkaban.execapp.jmx.JmxJobCallback registered.
+2021/03/05 16:42:28.033 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Starting to configure Metric Reports
+2021/03/05 16:42:28.034 +0800  INFO [MetricReportManager] [main] [Azkaban] Instantiating MetricReportManager
+2021/03/05 16:42:28.034 +0800  INFO [MetricReportManager] [main] [Azkaban] Enabling Metric Manager
+2021/03/05 16:42:28.034 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Adding number of failed flow metric
+2021/03/05 16:42:28.038 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Adding number of failed jobs metric
+2021/03/05 16:42:28.038 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Adding number of running Jobs metric
+2021/03/05 16:42:28.039 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Adding number of running flows metric
+2021/03/05 16:42:28.040 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Adding number of queued flows metric
+2021/03/05 16:42:28.040 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Completed configuring Metric Reports
+2021/03/05 16:42:28.040 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] No value for property: jmx.attribute.processor.class was found
+2021/03/05 16:42:28.042 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] This executor is already in the DB. Found active=true
+2021/03/05 16:42:28.077 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] This executor is already in the DB. Found: DESKTOP-DECJGCG:12321 (id: 1), active=true
+2021/03/05 16:42:28.080 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Started Executor Server on DESKTOP-DECJGCG:12321
+2021/03/05 16:42:28.080 +0800  INFO [AzkabanExecutorServer] [main] [Azkaban] Setting timezone to Asia/Shanghai
+2021/03/05 16:42:28.080 +0800  INFO [AzkabanWebServer] [main] [Azkaban] Azkaban Exec Server started...
+2021/03/05 16:42:28.081 +0800  INFO [FlowRunnerManager] [main] [Azkaban] Set active action ignored. Executor is already active
+2021/03/05 16:42:28.081 +0800  INFO [AzkabanWebServer] [main] [Azkaban] Azkaban Exec Server activated...
+2021/03/05 16:42:28.081 +0800  INFO [DataSourceUtils] [main] [Azkaban] h2 DB path: D:\Az-View\local\h2
+2021/03/05 16:42:28.081 +0800  INFO [AzkabanDatabaseSetup] [main] [Azkaban] Searching for installed tables
+2021/03/05 16:42:28.085 +0800  INFO [AzkabanDatabaseSetup] [main] [Azkaban] Searching for table versions in the properties table
+2021/03/05 16:42:28.103 +0800  INFO [ExecutorManager] [main] [Azkaban] Initializing executors from database.
+2021/03/05 16:42:28.104 +0800  INFO [ExecutorManager] [main] [Azkaban] Loading running flows from database..
+2021/03/05 16:42:28.122 +0800  INFO [ExecutorManager] [main] [Azkaban] Loaded 0 running flows
+2021/03/05 16:42:28.125 +0800  INFO [ExecutorManager] [main] [Azkaban] QueueProcessorThread active turned true
+2021/03/05 16:42:28.126 +0800  INFO [ExecutionLogsCleaner] [main] [Azkaban] Starting execution logs clean up thread
+2021/03/05 16:42:28.127 +0800  INFO [AzkabanWebServer] [main] [Azkaban] Setting up web resource dir azkaban-web-server/build/install/azkaban-web-server/web
+2021/03/05 16:42:28.127 +0800  INFO [ExecutionLogsCleaner] [azk-execlog-cleaner] [Azkaban] Cleaning old logs from execution_logs
+2021/03/05 16:42:28.173 +0800  INFO [JdbcTriggerImpl] [main] [Azkaban] Loading all triggers from db.
+2021/03/05 16:42:28.173 +0800  INFO [ExecutionLogsCleaner] [azk-execlog-cleaner] [Azkaban] Cleaning old log files before 2020-12-11T16:42:28.127+08:00
+2021/03/05 16:42:28.190 +0800  INFO [JdbcTriggerImpl] [main] [Azkaban] Loaded 0 triggers.
+2021/03/05 16:42:28.196 +0800  INFO [WebMetricsImpl] [main] [Azkaban] No metrics set up for Web server.
+2021/03/05 16:42:28.202 +0800  INFO [ProjectManagerServlet] [main] [Azkaban] downloadBufferSize: 8192
+2021/03/05 16:42:28.552 +0800  INFO [AzkabanWebServer] [main] [Azkaban] Server started
+2021/03/05 16:42:28.552 +0800  INFO [AzkabanWebServer] [main] [Azkaban] Azkaban Web Server started...
+2021/03/05 16:42:29.186 +0800  INFO [ExecutionLogsCleaner] [azk-execlog-cleaner] [Azkaban] Cleaned up 0 log entries.
+2021/03/05 16:42:29.186 +0800  INFO [ExecutionLogsCleaner] [azk-execlog-cleaner] [Azkaban] log clean up time: 1013 ms.
+2021/03/05 16:42:34.684 +0800  INFO [LoginAbstractAzkabanServlet] [10405169@qtp-837659261-0] [Azkaban] 0  -  "GET /manager project=test HTTP/1.1" browser
+2021/03/05 16:42:39.340 +0800  INFO [LoginAbstractAzkabanServlet] [960662812@qtp-837659261-4] [Azkaban] 0  -  "POST /manager project=test HTTP/1.1" browser
+2021/03/05 16:42:39.362 +0800  INFO [LoginAbstractAzkabanServlet] [960662812@qtp-837659261-4] [Azkaban] Session id created for user 'azkaban' and ip 0, 0 session(s) found from this IP
+2021/03/05 16:42:39.466 +0800  INFO [LoginAbstractAzkabanServlet] [960662812@qtp-837659261-4] [Azkaban] 0 azkaban "GET /manager project=test HTTP/1.1" browser
+2021/03/05 16:42:40.714 +0800  INFO [LoginAbstractAzkabanServlet] [1959690543@qtp-837659261-5] [Azkaban] 0 azkaban "GET /manager project=test&edit-view=true HTTP/1.1" browser
+2021/03/05 16:43:10.616 +0800  INFO [LoginAbstractAzkabanServlet] [1959690543@qtp-837659261-5] [Azkaban] 0 azkaban "GET /manager project=test&ajax=fetchflowjobs&flow=azkaban HTTP/1.1" browser
+2021/03/05 16:43:27.648 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/05 16:43:28.054 +0800  INFO [InMemoryMetricEmitter] [azk-metric-pool-1] [Azkaban] First time capturing metric: NumRunningFlowMetric
+2021/03/05 16:43:28.054 +0800  INFO [InMemoryMetricEmitter] [azk-metric-pool-3] [Azkaban] First time capturing metric: NumQueuedFlowMetric
+2021/03/05 16:43:28.054 +0800  INFO [InMemoryMetricEmitter] [azk-metric-pool-2] [Azkaban] First time capturing metric: NumFailedJobMetric
+2021/03/05 16:43:28.054 +0800  INFO [InMemoryMetricEmitter] [azk-metric-pool-0] [Azkaban] First time capturing metric: NumRunningJobMetric
+2021/03/05 16:43:28.057 +0800  INFO [InMemoryMetricEmitter] [azk-metric-pool-0] [Azkaban] First time capturing metric: NumFailedFlowMetric
+2021/03/05 16:43:37.584 +0800  INFO [LoginAbstractAzkabanServlet] [1959690543@qtp-837659261-5] [Azkaban] 0 azkaban "GET /manager project=test&edit-view=true HTTP/1.1" browser
+2021/03/05 16:44:27.662 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/05 16:44:27.663 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/05 16:45:27.670 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/05 16:46:27.680 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/05 16:46:27.680 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/05 16:47:27.693 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/05 16:48:27.703 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/05 16:48:27.704 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/05 16:49:27.719 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/05 16:50:27.726 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0
+2021/03/05 16:50:27.726 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] Cleaning recently finished
+2021/03/05 16:51:27.728 +0800  INFO [FlowRunnerManager] [FlowRunnerManager-Cleaner-Thread] [Azkaban] # of executing flows: 0

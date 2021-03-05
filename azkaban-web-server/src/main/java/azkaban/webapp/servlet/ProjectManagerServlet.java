@@ -91,6 +91,7 @@ import org.apache.commons.lang.StringUtils;
 import org.quartz.SchedulerException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import view.viewMethods;
 import yaml.YamlMethods;
 import zip.ZipMethods;
 
@@ -247,8 +248,10 @@ public class ProjectManagerServlet extends LoginAbstractAzkabanServlet {
         handlePurgeProject(req, resp, session);
       } else if (hasParam(req, "download")) {
         handleDownloadProject(req, resp, session);
-      } else if(hasParam(req,"view")){
-        handleViewCommit(req,resp,session);
+      } else if(hasParam(req,"git-pull")){
+        handleGitPull(req,resp,session);
+      }else if(hasParam(req,"edit-view")){
+        handleEditView(req,resp,session);
       } else  {
         handleProjectPage(req, resp, session);
       }
@@ -257,7 +260,6 @@ public class ProjectManagerServlet extends LoginAbstractAzkabanServlet {
       handleReloadProjectWhitelist(req, resp, session);
       return;
     }
-
     final Page page =
         newPage(req, resp, session,
             "azkaban/webapp/servlet/velocity/projectpage.vm");
@@ -265,15 +267,28 @@ public class ProjectManagerServlet extends LoginAbstractAzkabanServlet {
     page.render();
   }
 
-  protected  void handleViewCommit(final HttpServletRequest req,
+  protected  void handleGitPull(final HttpServletRequest req,
                                  final HttpServletResponse resp, final Session session)
                                  throws ServletException, IOException{
-    if("true".equals(getParam(req,"view"))){
-      commitView(req,resp,session);
+    if("true".equals(getParam(req,"git-pull"))){
+      gitPull(req,resp,session);
     }
   }
 
-  private void commitView(final HttpServletRequest req, final HttpServletResponse resp,
+  protected  void handleEditView(final HttpServletRequest req,
+                                final HttpServletResponse resp, final Session session)
+          throws ServletException, IOException{
+    if("true".equals(getParam(req,"edit-view"))){
+      editView(req,resp,session);
+    }
+  }
+  private void editView(final HttpServletRequest req, final HttpServletResponse resp,
+                       final Session session)throws ServletException{
+    new viewMethods().startViewEdit();
+
+
+  }
+  private void gitPull(final HttpServletRequest req, final HttpServletResponse resp,
                           final Session session)throws ServletException{
     String remotePath = "https://github.com/ruobinghan/azkaban.git";
     String username="597759884@qq.com";
@@ -281,23 +296,23 @@ public class ProjectManagerServlet extends LoginAbstractAzkabanServlet {
     String projectName="hanrb";
     String branch="master";
     try {
-      GitMethods git= new GitMethods(remotePath,username,password,projectName,branch);
-      YamlMethods yml= new YamlMethods();
-      ZipMethods zip=new ZipMethods();
-
-      git.Clone();
-      git.Package();
-
-      yaml.unit.Node n1=yml.creatNode("a1","command","d1");
-      yaml.unit.Node n2=yml.creatNode("a2","command","d2","a1");
-
-      yml.setNodeList(n1);
-      yml.setNodeList(n2);
-
-      if(zip.prepareZip(projectName)){
-        zip.creatZipPackage(yml);
-      }
-
+      logger.info("git pull begin...");
+//      GitMethods git= new GitMethods(remotePath,username,password,projectName,branch);
+//      YamlMethods yml= new YamlMethods();
+//      ZipMethods zip=new ZipMethods();
+//
+//      git.Clone();
+//      git.Package();
+//
+//      yaml.unit.Node n1=yml.creatNode("a1","command","d1");
+//      yaml.unit.Node n2=yml.creatNode("a2","command","d2","a1");
+//
+//      yml.setNodeList(n1);
+//      yml.setNodeList(n2);
+//
+//      if(zip.prepareZip(projectName)){
+//        zip.creatZipPackage(yml);
+//      }
     }catch (Exception e){
       logger.error(e.getMessage());
     }

@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 
 public class WebMethods {
     public void Upload(){
-        System.getProperties().setProperty("webdriver.chrome.driver", "D:\\Azkaban\\hanrb\\ChromeDriver\\chromedriver.exe");
+        System.getProperties().setProperty("webdriver.chrome.driver", PathParam.CHROME_PATH);
         ChromeDriver chromeDriver = new ChromeDriver();
         chromeDriver.manage().window().maximize();
         chromeDriver.get("http://localhost:8081/manager?project=azkaban");

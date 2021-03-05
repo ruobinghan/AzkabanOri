@@ -36,12 +36,11 @@
              href="${context}/manager?project=${project.name}&download=true">
             <span class="glyphicon glyphicon-download"></span> Download
           </a>
-          <a class="btn btn-sm btn-info"
-             href="${context}/manager?project=${project.name}&view=true">
+          <button class="btn btn-sm btn-info" id="git-pull">
+            <span class="glyphicon glyphicon-download"></span> Git-Pull
+           </button>
+          <button class="btn btn-sm btn-info" id="edit-view">
             <span class="glyphicon glyphicon-download"></span> Edit-View
-           </a>
-          <button class="btn btn-sm btn-info" id="xff">
-            <span class="glyphicon glyphicon-download"></span> Commit-View
            </button>
         </div>
       </div>

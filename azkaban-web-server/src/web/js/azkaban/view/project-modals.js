@@ -21,19 +21,20 @@ azkaban.ProjectView = Backbone.View.extend({
   events: {
     "click #project-upload-btn": "handleUploadProjectJob",
     "click #project-delete-btn": "handleDeleteProject",
-    "click #xff": "handleXff"
+    "click #git-pull": "gitPull",
+    "click #edit-view": "editView"
   },
 
   initialize: function (settings) {
   },
 
- handleXff:function(evt){
-    console.log("xff");
+ gitPull:function(evt){
+    console.log("git pull");
 
         var requestURL = contextURL + "/manager";
         var requestData = {
           "project": projectName,
-          "view": true
+          "git-pull": true
         };
         var successHandler = function (data) {
           if (data.error) {
@@ -48,6 +49,24 @@ azkaban.ProjectView = Backbone.View.extend({
     console.log("click upload project");
     $('#upload-project-modal').modal();
   },
+
+editView:function(evt){
+    console.log("edit view ");
+
+        var requestURL = contextURL + "/manager";
+        var requestData = {
+          "project": projectName,
+          "edit-view": true
+        };
+        var successHandler = function (data) {
+          if (data.error) {
+            console.log("error",data.error)
+            return;
+          }
+          console.log("success")
+        };
+        $.get(requestURL, requestData, successHandler, "json");
+ },
 
   handleDeleteProject: function (evt) {
     console.log("click delete project");
